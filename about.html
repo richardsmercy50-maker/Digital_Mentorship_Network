@@ -1,12 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./about.css"/>
-    <title>About Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SheConnect - About & Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* ─────────── TOP LEFT NAVIGATION BAR ─────────── */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(188,19,254,1);
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .bar1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active .bar2 {
+      opacity: 0;
+    }
+    .hamburger.active .bar3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Slide-out menu */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: rgba(255,105,180,1);
+      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 10px 20px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(188,19,254,0.7);
+    }
+
+    /* Section styling */
+    section {
+      padding: 50px 20px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      color: white;
+    }
+
+    /* About Section */
+    #about-us {
+      background-color: rgba(255,105,180,1);
+      padding-top: 80px;
+    }
+
+    /* Roles */
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 30px;
+    }
+
+    .role-card {
+      background-color: rgba(188,19,254,0.9);
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 180px;
+      max-width: 250px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background-color: rgba(188,19,254,0.7);
+    }
+
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background-color: rgba(255,255,255,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 300px;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: rgba(255, 105, 180, 0.9);
+      padding: 50px 20px;
+    }
+
+    .contact-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.719);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
+    }
+
+    .contact-left, .contact-right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-right img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .contact-form .input-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #1c1f1c;
+      outline: none;
+    }
+
+    .btn {
+      background: #4c6faf;
+      padding: 12px 25px;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #3e8e41;
+    }
+
+    @media(max-width: 900px) {
+      .contact-wrapper {
+        flex-direction: column;
+      }
+
+      .contact-right img {
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+
+  <!-- ─────────── TOP LEFT NAVIGATION ─────────── -->
+  <div class="nav-bar">
+    <div class="hamburger" id="hamburger">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+    </div>
+  </div>
+
+  <!-- Slide Menu -->
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="mentors.html">Meet Our Mentors</a>
+    <a href="progress.html">Progress Tracker</a>
+    <a href="#about-us">About Us</a>
+    <a href="#testimonials">Testimonies</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ─────────── ABOUT US SECTION ─────────── -->
+  <section id="about-us">
+    <h2>About SheConnect</h2>
+    <p>
+      SheConnect is a digital mentorship platform created by <strong>devQueens</strong> under
+      <strong>TECH4DEV</strong>. Our mission is to empower young women by connecting them with mentors,
+      accountability partners, and a supportive community that guides them through education, career, and life.
+    </p>
+
+    <div class="roles">
+      <div class="role-card">
+        <h4>Lead Developers</h4>
+        <p>Build and maintain the platform.</p>
+      </div>
+      <div class="role-card">
+        <h4>UI/UX Designers</h4>
+        <p>Create functional, beautiful user experiences.</p>
+      </div>
+      <div class="role-card">
+        <h4>Content & Community</h4>
+        <p>Manage student resources and community growth.</p>
+      </div>
+      <div class="role-card">
+        <h4>QA & Testing</h4>
+        <p>Ensure everything runs smoothly and bug-free.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── TESTIMONIES SECTION ─────────── -->
+  <section id="testimonials">
+    <h2>Testimonies</h2>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <p>"SheConnect helped me find clarity in my career path and confidence in myself."</p>
+        <strong>- Lerato</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"My mentor guided me through university applications step by step."</p>
+        <strong>- Amara</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── CONTACT SECTION ─────────── -->
+  <section id="contact">
+    <h2>Get in Touch with Us</h2>
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <form class="contact-form">
+          <div class="input-row">
+            <div class="input-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Name" required>
+            </div>
+            <div class="input-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="input-group">
+            <label>Subject</label>
+            <input type="text" placeholder="Subject" required>
+          </div>
+          <div class="input-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-right">
+        <img src="C:\Users\user\Downloads\Project_Techsters\Project_Techsters\Contact image.png" alt="Contact Image">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+
+      if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+      } else {
+        menu.style.left = "0";
+      }
+    });
+
+    // Contact form submission
+    const form = document.querySelector(".contact-form");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Your message has been sent successfully!");
+      form.reset();
+    });
+  </script>
 </body>
 </html>
