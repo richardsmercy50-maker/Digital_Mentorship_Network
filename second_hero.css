@@ -1,0 +1,276 @@
+.second-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    
+}
+.second-hero h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+#platform {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+.second-hero h3{
+    font-size: 20px;
+    font-weight: 500;
+}   
+
+.second-hero1 {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+/* FIRST ROW OF CARDS */
+.card {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* EACH CARD BOX */
+.card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 105, 180, 0.6);
+}
+
+/* SECOND ROW OF CARDS */
+.card2 {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.card2 div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgba(255, 105, 180, 0.6);
+    border-radius: 5px;
+}
+.how-it-works {
+    padding: 40px 20px;
+    background-color: var(--bg-pink);
+    color: var(--text-color);
+}
+
+.how-it-works h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.how-it-works .subtitle {
+    font-size: 1.125rem;
+    text-align: center;
+    color: var(--sub-text-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------- */
+/* Card Flip Styling & Fixes */
+/* ----------------------------------- */
+
+/* Reduced Height and 3D Perspective Container */
+.box.flip-card {
+    perspective: 1000px; 
+    transition: none; 
+    /* Reduced Height */
+    min-height: 220px; /* Reduced card height */
+    padding: 0;
+    background-color: transparent; 
+    box-shadow: none; 
+}
+
+/* Inner container that performs the flip */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+    /* Auto-Flip Animation */
+    animation: autoFlip 8s infinite ease-in-out; 
+}
+
+/* Delay for each card to create a sequential, staggered effect */
+.box.flip-card:nth-child(2) .flip-card-inner {
+    animation-delay: 2s;
+}
+
+.box.flip-card:nth-child(3) .flip-card-inner {
+    animation-delay: 4s;
+}
+
+.box.flip-card:nth-child(4) .flip-card-inner {
+    animation-delay: 6s;
+}
+
+/* Front and Back of the card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden; 
+    
+    /* Card appearance */
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05); 
+    
+    /* Centering content on both sides */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Styling for the front side (main content) */
+.flip-card-front {
+    transform: rotateY(0deg); 
+}
+
+/* Styling for the back side (quote) */
+.flip-card-back {
+    background-color: rgba(255, 105, 180, 0.6);
+    color: white; 
+    transform: rotateY(180deg); 
+}
+
+/* Quote specific styling (same as before) */
+.flip-card-back .quote {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.flip-card-back .quote-author {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* --- Existing Styles for Front Content (Modified) --- */
+/* Number Circle (now centered with content) */
+.number {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-color: rgba(255, 105, 180, 0.6);
+    height: 40px; /* Adjusted size */
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+/* Box Content (reconfigured for centering) */
+.box-content {
+    /* Change to column layout to stack icon, title, and paragraph */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center items within box-content */
+    gap: 8px; /* Reduced gap */
+}
+
+.icon {
+    color: var(--primary-pink);
+    font-size: 1.75rem; /* Reduced icon size */
+    padding-top: 0;
+    flex-shrink: 0;
+}
+
+/* Bold the text for the front side */
+.text h3 {
+    font-size: 1.125rem; /* Slightly increased title size */
+    font-weight: 800; /* Bolder Title */
+    color: var(--text-color);
+    margin: 0;
+}
+
+.text p {
+    font-size: 0.9rem; /* Increased description size */
+    color: var(--sub-text-color);
+    margin: 0;
+    font-weight: 500; /* Slightly bolder paragraph */
+}
+
+/* ----------------------------------- */
+/* Keyframes for Auto-Flip Animation */
+/* ----------------------------------- */
+@keyframes autoFlip {
+    0%, 30% {
+        transform: rotateY(0deg); /* Show front for 30% of the time */
+    }
+    40%, 70% {
+        transform: rotateY(180deg); /* Show back (flipped) */
+    }
+    80%, 100% {
+        transform: rotateY(360deg); /* Flip back to front (360 is same as 0) */
+    }
+}
+
+
+/* --- Responsive adjustments (remain the same) --- */
+@media (max-width: 1024px) {
+    .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .box-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
