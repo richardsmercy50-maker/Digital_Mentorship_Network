@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Page</title>
+    <link rel="stylesheet" href="./network.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<nav class="navbar">
+        <img src="./images/SHE. 1.png" class="logo"></div>
+        <ul class="menu">
+            <li> Home</li>
+            <li> Mentors</li>
+            <li> Mentees</li>
+            <li> Join</li>
+        </ul>
+        <div class="btn">
+            <button class="connect">Connect</button>
+            <button class="explore">Explore</button>
+        </div>
+    </nav>
+    <div class="mainC">
+        <h2 class="network">JOIN THE NETWORK</h2>
+    </div>
+    <!-- <h3 class="jnetwork"> Join the Network</h3> -->
+    <h5 class="networkdetails">Whether you’re here to guide or grow, this is your first step toward meaningful mentors,
+        honest feedback, and opportunities you might not find on your own.
+    </h5>
+    <main>
+        <div class="main_form">
+            <div class="mentorMentee">
+                <button class="mentor">Mentor</button>
+                <button class="mentee">Mentee</button>
+            </div>
+            <div class="details">
+                <h4 class="detail">DETAILS</h4>
+                <form class="basic_details" id="basic_details">
+                    <label class="first_name">First Name</label>
+                    <input id="first_name" type="text" required /> <br>
+
+                    <label class="last_name">Last Name</label>
+                    <input id="last_name" type="text" required /><br>
+
+                    <label class="phone_number">Phone Number</label>
+                    <input id="phone_number" type="tel" required /><br>
+
+                    <label class="Email">Email</label>
+                    <input id="Email" type="email" required /><br>
+
+                    <label class="about_me">About Me</label>
+                    <textarea id="about_me" name="about_me" rows="4" required></textarea><br>
+
+                    <label class="experience">Experience</label>
+                    <textarea id="experience" name="experience" rows="4" required></textarea><br>
+
+                    <label class="goal">Goals</label>
+                    <textarea id="goal" name="goal" rows="4" required></textarea><br>
+
+                    <label class="interest">Select your Interest</label>
+                    <select id="interest">
+                        <option value="FrontEnd"> Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="ui_ux">UI/UX</option>
+                        <option value="content_writing">Content Writing</option>
+                        <option value="digital_marketing">Digital Marketing</option>
+                        <option value="quality_assurance">Quality Assurance</option>
+                    </select>
+            </div>
+            <button class="button_submit" type="submit">Join Now</button>
+            </form>
+        </div>
+        <div class="second_part">
+            <h2 class="directory">DIRECTORY</h2>
+            <input class="search-input" type="text" placeholder="Search for Mentors...">
+
+            <div class="first_section2">
+                <h5 class="skills">Skills</h5>
+                <select id="industry">
+                    <option value="industry"> Industry</option>ß
+                    <option value="FrontEnd"> Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="ui_ux">UI/UX</option>
+                    <option value="content_writing">Content Writing</option>
+                    <option value="digital_marketing">Digital Marketing</option>
+                    <option value="quality_assurance">Quality Assurance</option>
+                </select>
+                <select id="goals">
+                    <option value="industry"> Goals</option>
+                    <option value="FrontEnd"> text</option>
+                    <option value="backend">text</option>
+                    <option value="ui_ux">text</option>
+                </select>
+            </div>
+            <div class="second_section">
+                <div class="first_box">
+                    <img src="./images/headshot.png" class="headshot" width="45px" height="45px" />
+                    <h4 class="name">Musa Taiwo</h4>
+                    <h5 class="skill">Frontend Engineer</h5>
+                    <p>Hard Skills: HTML, CSS, Javascript, React</p>
+                </div>
+
+                <div class="second_box">
+                    <img src="./images/headshot.png" width="45px" height="45px" />
+
+                    <h4 class="name">Francis Umeh</h4>
+                    <h5 class="skill">Backend Engineer</h5>
+                    <p>Hard Skills: Java, Springboot, Javascript</p>
+                </div>
+
+                <div class="third_box">
+                    <img src="./images/headshot.png" width="45px" height="45px" />
+
+                    <h4 class="name">Adanna Micheal</h4>
+                    <h5 class="skill">QA Engineer</h5>
+                    <p>Hard Skills: Cypress, Selenium, Java</p>
+                </div>
+            </div>
+            <h3 class="resources">RESOURCES & TIPS</h3>
+
+            <div class="fourth_box">
+                <img class="img4" src="./images/goal.png" width="45px" height="45px" />
+                <a class="name4" href="https://example.com"> GOAL SETTING</a>
+                <h5 class="skill4">Guide</h5>
+                <p class="p4">CHAMP</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
