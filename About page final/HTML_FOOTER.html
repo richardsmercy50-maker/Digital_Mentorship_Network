@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SheConnect - About & Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 /* ─────────── GENERAL STYLES ─────────── */
 body {
@@ -230,6 +231,130 @@ body {
   font-weight: bold;
 }
 
+/* ─────────── SUCCESS STORIES SECTION ─────────── */
+.success-stories {
+  background: linear-gradient(135deg,
+    rgba(255, 78, 199, 0.8),
+    rgba(177, 59, 255, 0.8),
+    rgba(123, 43, 253, 0.8)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.heading .title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.heading .subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.stories-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+  max-width: 350px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  flex: 1;
+  min-width: 260px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.02); 
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.quote-icon {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.message {
+  font-size: 15px;
+  margin: 15px 0;
+  line-height: 1.4;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.author {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 15px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+.testimony-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.up {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+  height: 450px;
+  min-width: 260px;
+  max-width: 350px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(200, 166, 255, 0.4),
+    rgba(247, 161, 215, 0.2),
+    rgba(243, 217, 255, 0.3)
+  ); 
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.02);
+  flex: 1;
+  min-width: 260px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.text11 {
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 25px;
+  line-height: 1.4;
+}
+
 /* ─────────── TESTIMONIALS ─────────── */
 #testimonials {
   background-color: rgba(188,19,254,0.7);
@@ -413,6 +538,7 @@ input:focus, textarea:focus {
   color: #ffd700;
 }
 
+/* ─────────── RESPONSIVE STYLES ─────────── */
 @media(max-width: 900px) {
   .contact-wrapper, .roles, .testimonials {
     flex-direction: column;
@@ -450,6 +576,12 @@ input:focus, textarea:focus {
     font-size: 28px;
     margin: 30px 20px;
   }
+  
+  .stories-cards,
+  .testimony-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* END OF STYLES */
@@ -473,6 +605,7 @@ input:focus, textarea:focus {
   <a href="#hero">Home</a>
   <a href="#about-us">About Us</a>
   <a href="#team">Meet the Team</a>
+  <a href="#success-stories">Success Stories</a>
   <a href="#testimonials">Testimonies</a>
   <a href="#contact">Contact</a>
 </div>
@@ -489,7 +622,7 @@ input:focus, textarea:focus {
 
 <!-- ABOUT SECTION -->
 <section id="about-us">
-  <img src="C:\Users\user\Downloads\Project_Techsters\About page final\images\About_hero.png" alt="SheConnect Banner" class="about-banner">
+  <img src="C:\Users\user\Downloads\Project_Techsters\About page final\images\techsters_banner.jpg" alt="SheConnect Banner" class="about-banner">
   <h2>About SheConnect</h2>
   <p>SheConnect is a digital mentorship platform created by <strong>devQueens</strong> under <strong>TECH4DEV</strong>. Our mission is to empower young women by connecting them with mentors, accountability partners, and a supportive community that guides them through education, career, and life.</p>
 
@@ -536,6 +669,123 @@ input:focus, textarea:focus {
       <div class="card-content">
         <h2 class="card-title">Emily Chen</h2>
         <p class="card-role">UI/UX Designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES SECTION -->
+<section class="success-stories" id="success-stories">
+  <div class="heading">
+    <p class="title">Success stories from our communities</p>
+    <p class="subtitle">Hear from women who have transformed their careers and accelerating their growth through our <br> Digital mentorship network.</p>
+  </div>
+
+  <div class="stories-cards">
+    <div class="story-card">
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="message">
+        "Finding a mentor through HerMentor was life-changing. My mentor helped me navigate a career transition and gave me the confidence to apply for senior positions. I got promoted within 6 months!"
+      </p>
+      <div class="author">
+        <strong>Emily Thompson</strong><br>
+        Software Engineer<br>
+        TechCorp
+      </div>
+    </div>
+
+    <div class="story-card">
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="message">
+        "The community here is incredible. Not only did I find an amazing mentor, but I've also built lasting friendships with other women in tech. The support and encouragement are unmatched."
+      </p>
+      <div class="author">
+        <strong>Priya Patel</strong><br>
+        Product Designer<br>
+        Design Studio
+      </div>
+    </div>
+
+    <div class="story-card">
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="message">
+        "As a first-time founder, having a mentor who's been through it all made such a difference. The guidance I received on fundraising and team building was invaluable. Highly recommend!"
+      </p>
+      <div class="author">
+        <strong>Alexandra Kim</strong><br>
+        Startup Founder<br>
+        InnovateCo
+      </div>
+    </div>
+  </div>
+
+  <div class="testimony-wrapper">
+    <div class="up">
+      <i class="fa-solid fa-quote-right quote-icon"></i>        
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="text11">"I joined the Digital Mentorship Network with zero tech background. My mentor guided me step-by-step, helped me choose the right learning path, and even reviewed my first projects. Today, I've built two websites on my own and I'm currently applying for tech scholarships."</p>
+      <div class="author">
+        <strong>Afolayan Joseph Hossana</strong><br>
+        Software Engineering
+      </div>
+    </div>
+    
+    <div class="up">
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="text11">"I used to think tech was too hard. But my mentor simplified everything, gave me learning resources, and checked my progress weekly. Today, I'm already working on my first mobile app project. The mentorship gave me clarity, confidence, and discipline."</p>
+      <div class="author">
+        <strong>Eyiyato Ayotomiwa Michael</strong><br>
+        Software Engineering
+      </div>
+    </div>
+    
+    <div class="up">
+      <i class="fa-solid fa-quote-right quote-icon"></i>
+      <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <p class="text11">"I used to jump from course to course without direction. My mentor helped me discover I'm passionate about Cybersecurity. She created a roadmap for me, shared tools, and linked me to a beginner-friendly training. For the first time, I know where I'm going."</p>
+      <div class="author">
+        <strong>Folarin Wuraola Ayomide</strong><br>
+        Cyber Security
       </div>
     </div>
   </div>
@@ -640,10 +890,10 @@ input:focus, textarea:focus {
       <p>© 2025 Digital Mentorship Network. All rights reserved</p>
     </div>
     <div>
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-whatsapp"></i>
-      <i class="bi bi-x"></i>
-      <i class="bi bi-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
     </div>
   </footer>
 </section>
