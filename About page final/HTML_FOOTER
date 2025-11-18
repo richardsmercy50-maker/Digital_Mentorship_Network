@@ -270,6 +270,92 @@ input:focus, textarea:focus {
   transform: scale(1.05);
 }
 
+/* ─────────── FOOTER STYLES ─────────── */
+.footer {
+  background-color: rgba(188,19,254,1);
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-line {
+  height: 1px;
+  background-color: rgba(255,255,255,0.3);
+  margin: 30px 0 20px;
+}
+
+.footer-bottom {
+  background-color: rgba(188,19,254,0.9);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.foot-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.foot-icon .logo img {
+  height: 40px;
+}
+
+.foot-icon i {
+  font-size: 20px;
+  margin: 0 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.foot-icon i:hover {
+  color: #ffd700;
+}
+
 @media(max-width: 900px) {
   .contact-wrapper, .roles, .testimonials {
     flex-direction: column;
@@ -278,6 +364,16 @@ input:focus, textarea:focus {
   .contact-right img {
     height: 300px;
     object-fit: cover;
+  }
+  
+  .foot-icon {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -294,7 +390,7 @@ input:focus, textarea:focus {
     <div class="bar bar3"></div>
   </div>
 
-  <img src= 'C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\SheLOGO.png' class="logo" alt="SheConnect Logo">
+  <img src='C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\SheLOGO.png' class="logo" alt="SheConnect Logo">
 </div>
 
 <!-- Slide Menu -->
@@ -308,8 +404,6 @@ input:focus, textarea:focus {
 <!-- HERO -->
 <section id="hero">
   <div class="hero-content">
-    
-
     <button class="btn" onclick="document.getElementById('about-us').scrollIntoView({behavior:'smooth'});">Learn More</button>
   </div>
 </section>
@@ -319,7 +413,7 @@ input:focus, textarea:focus {
 
 <!-- ABOUT SECTION -->
 <section id="about-us">
-  <img src= "C:\Users\user\Downloads\techsters.jpg" alt="SheConnect Banner" class="about-banner">
+  <img src="C:\Users\user\Downloads\techsters.jpg" alt="SheConnect Banner" class="about-banner">
   <h2>About SheConnect</h2>
   <p>SheConnect is a digital mentorship platform created by <strong>devQueens</strong> under <strong>TECH4DEV</strong>. Our mission is to empower young women by connecting them with mentors, accountability partners, and a supportive community that guides them through education, career, and life.</p>
 
@@ -348,12 +442,12 @@ input:focus, textarea:focus {
   <h2>Testimonies</h2>
   <div class="testimonials">
     <div class="testimonial-card">
-      <img src= C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Lerato_Walaza_MTVShuga_Down_South_premiere_in_2019_06.jpg class="testimonial-img" alt="Lerato">
+      <img src='C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Lerato_Walaza_MTVShuga_Down_South_premiere_in_2019_06.jpg' class="testimonial-img" alt="Lerato">
       <p>"SheConnect helped me find clarity in my career path and confidence in myself."</p>
       <strong>- Lerato</strong>
     </div>
     <div class="testimonial-card">
-      <img src= C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Amara_La_Negra_Dec_2018.png  class="testimonial-img" alt="Amara">
+      <img src='C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Amara_La_Negra_Dec_2018.png' class="testimonial-img" alt="Amara">
       <p>"My mentor guided me through university applications step by step."</p>
       <strong>- Amara</strong>
     </div>
@@ -388,9 +482,66 @@ input:focus, textarea:focus {
       </form>
     </div>
     <div class="contact-right">
-      <img src= 'C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Contact image.png' alt="Contact Image">
+      <img src='C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\Contact image.png' alt="Contact Image">
     </div>
   </div>
+</section>
+
+<!-- FOOTER -->
+<section id="must">
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>SheConnect</h3>
+        <p>Empowering women through meaningful mentorship connections.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#">Find a Mentor</a></li>
+          <li><a href="#">Become a Mentor</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Guidelines</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+  </footer>
+</section>
+
+<section class="footer-bottom">
+  <footer class="foot-icon">
+    <div class="logo">
+      <img src="/assets/she logo.png" alt="she logo" />
+    </div>
+    <div>
+      <p>© 2025 Digital Mentorship Network. All rights reserved</p>
+    </div>
+    <div>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-x"></i>
+      <i class="bi bi-instagram"></i>
+    </div>
+  </footer>
 </section>
 
 <script>
@@ -427,61 +578,3 @@ changeQuote();
 </script>
 </body>
 </html>
-
-// FOOTER//
-
-<section id="must">
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-column">
-            <h3>SheConnect</h3>
-            <p>Empowering women through meaningful mentorship connections.</p>
-          </div>
-          <div class="footer-column">
-            <h4>Platform</h4>
-            <ul>
-              <li><a href="#">Find a Mentor</a></li>
-              <li><a href="#">Become a Mentor</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Guidelines</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-line"></div>
-      </footer>
-    </section>
-    
-    <section class="footer-bottom">
-      <footer class="foot-icon">
-        <div class="logo">
-          <img src="/assets/she logo.png" alt="she logo" />
-        </div>
-        <div >
-          <p>© 2025 Digital Mentorship Network. All rights reserved</p>
-        </div>
-        <div>
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-whatsapp"></i>
-          <i class="bi bi-x"></i>
-          <i class="bi bi-instagram"></i>
-        </div>
-    </section>
-     </footer>
