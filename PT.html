@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Mentorship Network - Progress Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .step {
+      margin-bottom: 20px;
+    }
+
+    .step label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #4caf50;
+      transition: width 0.4s;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #4caf50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+
+    .certificate {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8ffe8;
+      border: 1px solid #4caf50;
+      border-radius: 10px;
+      display: none;
+    }
+    .center{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Track Your Progress</h1>
+  <p class="center">You do not have to be fast, you just have to be steady. <br> Small steps taken daily lead to the biggest change</p>
+  <div class="container">
+
+    <div class="step">
+      <label><input type="checkbox" id="register"> Step 1: Registration</label>
+    </div>
+
+    <div class="step">
+      <label><input type="checkbox" id="mentor"> Step 2: Get Assigned a Mentor</label>
+    </div>
+
+    <div class="step">
+      <label><input type="checkbox" id="sessions"> Step 3: Attend Mentorship Sessions</label>
+    </div>
+
+    <div class="step">
+      <label><input type="checkbox" id="classes"> Step 4: Complete Digital Classes</label>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <button id="generateCert" disabled>Generate Certificate</button>
+
+    <div class="certificate" id="certificateBox">
+      <h3>🎉 Congratulations!</h3>
+      <p>You have successfully completed all mentorship program steps.</p>
+      <p><strong>Digital Certificate Generated.</strong></p>
+    </div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const progressFill = document.getElementById("progressFill");
+    const certButton = document.getElementById("generateCert");
+    const certBox = document.getElementById("certificateBox");
+
+    function updateProgress() {
+      let completed = 0;
+      checkboxes.forEach(cb => { if (cb.checked) completed++; });
+
+      const percentage = (completed / checkboxes.length) * 100;
+      progressFill.style.width = percentage + "%";
+
+      certButton.disabled = percentage < 100;
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener("change", updateProgress));
+
+    certButton.addEventListener("click", () => {
+      certBox.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
