@@ -1,5 +1,5 @@
 /* Reset and Base Styles */
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,81 +13,166 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================================
-   NAVBAR STYLES
-   ======================================== */
 .navbar {
+    width: 100%;
     background-color: white;
-    padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding: 15px 48px; /* 15px 70px */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    background: linear-gradient(rgba(188, 19, 254));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.nav-link {
     display: flex;
-    gap: 2rem;
-    list-style: none;
     align-items: center;
-    font-weight: lighter;
+    justify-content: center;
+    gap: 5px; 
 }
 
-a {
+.logo img {
+    height: 30px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: fill;
+    /*height: 40px; /* 30px */
+   /* width: 40px; /* 30px */
+   /* border-radius: 50%;
+    object-fit: fill; /* cover */
+}
+
+.logo h2 {
+    color: #ff69b4; /* bluevoilet then most recent: #4B2E83*/
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8A00C4;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
     text-decoration: none;
-    color: #555151;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-link a:hover {
-    color: #a855f7;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.sign-in {
-    background: none;
-    border: none;
     color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
-    font-weight: bold;
+    font-size: 15px;
 }
 
-.sign-in:hover {
-    color: #a855f7;
+.nav-links a:hover {
+    color: #ff69b4;
 }
 
-.get-started {
-    background: linear-gradient(135deg, #a855f7, #d946ef);
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    position: absolute; 
+    display: none;
+    background-color: #ff69b4;
+    color: #333;
+    min-width: 190px; /*190px */
+    padding: 20px 0;
+    /*top: 38px;*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+.dropdown-content a {
     color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.get-started:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+.dropdown-content li {
+    padding: 10px 20px;
+}
+
+.dropdown-content a:hover {
+    color: #333; 
+}  
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+.btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+.btn-sign-in {
+    border: 1px solid #8A00C4;
+    color: #8A00C4;
+    padding: 5px 12px;
+}
+
+.btn-sign-in:hover {
+    border: 1px solid #ff69b4;
+    background-color: #ff69b4;
+    color: white;
+}
+
+.btn-get-started {
+    background-color: #8A00C4;
+    color: white;
+    padding: 7px 20px; 
+}
+
+.btn-get-started:hover {
+    background-color: #ff69b4;
+}
+
+.bars {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .nav-links, .nav-buttons, .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .bars {
+        display: block;
+        color: #8A00C4;
+    }
+
+    .show {
+        display: flex !important;
+        gap: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .nav-buttons a {
+        font-weight: lighter;
+    }
 }
 
 /* ========================================
@@ -96,7 +181,8 @@ a {
 
 /* Hero Buttons */
 .btn-primary {
-    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+    /*background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);*/
+    background-color: #8A00C4;
     color: white;
     border: none;
     padding: 0.75rem 1.75rem;
@@ -108,30 +194,37 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);*/
+    /*box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);*/
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+    transform: translateY(-3px);
+    /*box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);*/
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ff69b4;
 }
 
 .btn-secondary {
-    background: white;
-    color: #4B5563;
-    border: 2px solid #E5E7EB;
+    background-color: #FFFFFF;
+    color: #8A00C4;
+    border: 1px solid #8A00C4;
     padding: 0.75rem 1.75rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .btn-secondary:hover {
-    border-color: #7C3AED;
-    color: #7C3AED;
-    background: #F9FAFB;
+    border-color: #ff69b4;
+    color: #FFFFFF;
+    background-color: #ff69b4;
+    transform: translateY(-3px);
 }
 
 .btn-large {
@@ -170,13 +263,14 @@ a {
     gap: 0.75rem;
     padding: 0.75rem 1.5rem;
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-    border: 2px solid rgba(124, 58, 237, 0.2);
+    /*border: 2px solid rgba(124, 58, 237, 0.2);*/
+    border: 1px solid #8A00C4;
     border-radius: 50px;
     width: fit-content;
     font-weight: 600;
-    color: #7C3AED;
+    /*color: #7C3AED;*/
+    color: #8A00C4;
     font-size: 1rem;
-    /* Removed floating animation - now stable */
 }
 
 .hero-badge svg {
@@ -188,14 +282,21 @@ a {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.1;
-    color: #111827;
+    /*color: #111827;*/
+    color: #000;
     letter-spacing: -0.02em;
+}
+
+.active {
+    color: #ff69b4;
+    font-weight: bold;
 }
 
 .hero-description {
     font-size: 1rem;
     line-height: 1.7;
-    color: #4B5563;
+    /*color: #4B5563;*/
+    color: #333;
     max-width: 600px;
 }
 
@@ -222,12 +323,12 @@ a {
 .metric-number {
     font-size: 2rem;
     font-weight: 800;
-    color: #7C3AED;;
+    color: #8A00C4;;
 }
 
 .metric-label {
     font-size: 1rem;
-    color: #6B7280;
+    color: #333;
     font-weight: 500;
 }
 
@@ -385,4 +486,27 @@ a {
     .metric-number {
         font-size: 1.75rem;
     }
+}
+
+/* For the dynamic text content  */
+.dynamic-quote-container {
+    position: relative;
+    width: 100%;
+    height: 2rem; /* adjust based on your font size */
+    overflow: hidden;
+}
+
+.dynamic-quote {
+    position: absolute;
+    top: 0;
+    left: 100%; /* start off-screen right */
+    transition: left 1s ease;
+}
+
+.dynamic-quote.active {
+    left: 0; /* slide into view */
+}
+
+.dynamic-quote.exit {
+    left: -100%; /* slide out left */
 }

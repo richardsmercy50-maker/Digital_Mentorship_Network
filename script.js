@@ -1,3 +1,22 @@
+// for the dropdown menu nav bar
+const bars = document.getElementById("menuBar");
+const navLinks = document.querySelector('.nav-links');
+const navButtons = document.querySelector('.nav-buttons');
+
+bars.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    navButtons.classList.toggle("show");
+})
+
+const dropBtn = document.querySelector('.drop-btn');
+
+dropBtn.addEventListener("click", (e)=> {
+    if (window.innerWidth <= 900) {
+       e.preventDefault();
+       document.querySelector('.dropdown-content').classList.toggle("show");
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -201,3 +220,38 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     console.log('HerMentor landing page loaded successfully');
 });
+
+// For the dynamic text content
+const quotes = [
+    "“Behind every successful person is a mentor who believed in them.”",
+    "“When you light another’s candle, yours doesn’t dim.”",
+    "“Mentorship turns potential into performance.”"
+];
+
+const container = document.querySelector('.dynamic-quote-container');
+let currentIndex = 0;
+
+function slideQuote() {
+    const currentQuote = container.querySelector('.dynamic-quote');
+    
+    // Create new quote element
+    const nextQuote = document.createElement('p');
+    nextQuote.className = 'dynamic-quote';
+    nextQuote.textContent = quotes[(currentIndex + 1) % quotes.length];
+    container.appendChild(nextQuote);
+    
+    // Trigger sliding
+    setTimeout(() => {
+        currentQuote.classList.add('exit'); // slide current left
+        nextQuote.classList.add('active'); // slide next into view
+    }, 50); // slight delay to allow DOM to register
+    
+    // Remove old quote after animation
+    setTimeout(() => {
+        currentQuote.remove();
+        currentIndex = (currentIndex + 1) % quotes.length;
+    }, 1050); // 1s + small buffer
+}
+
+// Start rotating every 4 seconds
+setInterval(slideQuote, 4000);
