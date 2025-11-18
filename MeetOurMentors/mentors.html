@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mentors.css"/>
+    <title>Meet Our Mentors</title>
+</head>
+<body>
+    <div class="body">
+
+        <div class="heading">
+            <h4>Meet Our Expert Mentors</h4>
+        </div>
+        <div class="intro">
+            <p>Our mentors come from diverse backgrounds — from STEM to business and beyond — ready to guide you toward your goals.</p>
+        </div>
+        <div class="buttonArray">
+            <button>STEM</button>
+            <button>Business</button>
+            <button>Art</button>
+            <button>Finance</button>
+            <button>Personal Development</button>
+        </div>
+        <!-- Mentors card display -->
+         <div class="mentorWrapper">
+            <!-- Mentor 1 card -->
+            <div class="mentor">
+                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
+                <div class="mentorInfo">
+                    <p class="mentorName">Maria Kim</p>
+                    <button class="mentorButton">STEM</button>
+                    <p class="mentorBio">A biomedical engineer passionate about mentoring young innovators in science and tech.</p>
+                    <button class="mentorButton">CONNECT</button>
+                </div>
+    
+            </div>
+            <div class="mentor">
+                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
+                <div class="mentorInfo">
+                    <p class="mentorName">Sarah Jones</p>
+                    <button class="mentorButton">Art</button>
+                    <p class="mentorBio">Visual artist and creative coach guiding mentees in building artistic careers.</p>
+                    <button class="mentorButton">CONNECT</button>
+                </div>
+    
+            </div>
+            <div class="mentor">
+                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
+                <div class="mentorInfo">
+                    <p class="mentorName">Michael Lee</p>
+                    <button class="mentorButton">Business</button>
+                    <p class="mentorBio">Startup strategist helping aspiring entrepreneurs turn ideas into scalable ventures.</p>
+                    <button class="mentorButton">CONNECT</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="checkAllD">
+            <button id="openFormBtn">Find A Mentor</button>
+        </div>
+    
+        <!-- Mentors form -->
+        <div id="formModal" class="container modal">
+    
+            <form id="mentorForm" class="modal-content">
+                <div style="display: flex; gap: 18px; width: 50%; margin: auto;">
+                    <h2>Meet Our Mentors</h2>
+                    <span class="close" style="cursor: pointer;">&times;</span>
+                </div>
+                <p class="subtitle">Find the perfect mentor to support your journey.</p>
+    
+                <!-- PERSONAL INFO -->
+                <h3>Personal Information</h3>
+    
+                <div class="input-group">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+    
+                <div class="two-col">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="ageGroup" placeholder="Age Group">
+                </div>
+    
+                <!-- INTERESTS / GOALS -->
+                <h3>Interests / Goals</h3>
+    
+                <div class="input-group">
+                    <select id="interest">
+                        <option value="">Choose an interest</option>
+                        <option>STEM</option>
+                        <option>Business</option>
+                        <option>Art</option>
+                        <option>Finance</option>
+                        <option>Personal Development</option>
+                        <option>Health</option>
+                    </select>
+                </div>
+    
+                <textarea id="goals" placeholder="What do you want to learn?&#10;Short description of what you want to learn"></textarea>
+    
+                <div class="input-group">
+                    <select id="mentorGender">
+                        <option value="">Preferred Mentor Gender (optional)</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>No preference</option>
+                    </select>
+                </div>
+    
+                <!-- AVAILABILITY & MENTORSHIP -->
+                <div class="two-col">
+    
+                    <!-- LEFT: Availability -->
+                    <div>
+                        <h3>Availability</h3>
+    
+                        <label><input type="checkbox" value="Weekdays"> <span>Weekdays</span></label>
+                        <label><input type="checkbox" value="Weekends"> <span>Weekends</span></label>
+                        <label><input type="checkbox" value="Evening"> <span>Evening</span></label>
+                    </div>
+    
+                    <!-- RIGHT: Mentorship Preference -->
+                    <div>
+                        <h3>Mentorship Preference</h3>
+    
+                        <label><input type="radio" name="mentorship" value="One-on-One"> <span>One-on-One</span></label>
+                        <label><input type="radio" name="mentorship" value="Group"> <span>Group</span></label>
+                        <label><input type="radio" name="mentorship" value="Either"> <span>Either</span></label>
+                    </div>
+    
+                </div>
+    
+                <!-- EXPERIENCE LEVEL -->
+                <h3>Choose Experience Level</h3>
+    
+                <div class="experience-grid">
+                    <label><input type="radio" name="experience" value="Beginner mentor"> <span>Beginner mentor</span></label>
+                    <label><input type="radio" name="experience" value="Experienced mentor"> <span>Experienced mentor</span></label>
+                    <label><input type="radio" name="experience" value="Industry expert"> <span>Industry expert</span></label>
+                </div>
+    
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="submit-btn">Find My Mentor</button>
+    
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+
+
+
+    <script src="mentors.js"></script>
+</body>
+</html>

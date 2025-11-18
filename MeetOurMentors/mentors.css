@@ -1,4 +1,11 @@
-body{
+html{
+  html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+}
+.body{
     width: 95%;
     margin: auto;
 }
@@ -327,4 +334,12 @@ input[type="radio"] {
       border-radius: 8px;
       width: 600px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#footer {
+  width: fit-content;          /* stretch across the page */
+  margin: 0;            /* remove extra margins */
+  padding: 0;           /* optional, adjust as needed */
+  overflow: hidden; 
+  box-sizing: border-box; 
 }
