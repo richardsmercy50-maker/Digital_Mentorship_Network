@@ -1,0 +1,330 @@
+body{
+    width: 95%;
+    margin: auto;
+}
+.heading{
+    text-align: center;
+    margin: 12px;
+    color: rgb(31, 30, 30);
+}
+.intro{
+    text-align: center;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 12px;
+    width: 45%;
+    margin: auto;
+    color: rgb(51, 50, 50);
+}
+.buttonArray{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 24px auto 48px;
+}
+.buttonArray button{
+    color:rgba(188, 19, 254) ;
+    background-color: white;
+    border: solid 1.5px rgba(188, 19, 254);
+    padding: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mentorWrapper{
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 24px;
+    justify-content: space-evenly;
+}
+@media (max-width: 600px) {
+  .mentorWrapper {
+    flex-direction: column;
+  }
+}
+.mentor{
+    background-color: white;
+    border-radius: 5%;
+    width: 300px;
+    height: 380px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 6px;
+}
+.mentorImage{
+    align-self: center;
+    border: 3px solid rgba(188, 19, 254);
+    border-radius: 100%;
+    width: 50%;
+    height: 40%;
+}
+.mentorInfo{
+    display: block;
+    justify-content: center;
+    padding: 10px;
+}
+.mentorName{
+    font-weight: bolder;
+    font-family: Outfit;
+    font-size: 18px;
+}
+.mentorButton{
+    background-color:rgba(188, 19, 254) ;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 10%;
+}
+#openFormBtn{
+    padding: 12px;
+    color: rgba(188, 19, 254);
+    background-color: white;
+    border: solid 1px rgba(188, 19, 254);
+    cursor: pointer;
+}
+.checkAllD{
+    margin: 18px 0;
+    text-align: center;
+}
+
+
+/* mentor form styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+
+}
+
+
+
+body {
+
+  /* background: linear-gradient(135deg, #ff4bc8, #b45cff); */
+
+  padding: 40px;
+
+}
+
+
+
+.container {
+
+  max-width: 650px;
+
+  margin: 12px auto;
+  display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 25%; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: transparent;
+
+}
+
+
+
+form {
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* HEADINGS */
+
+h2 {
+
+  text-align: center;
+
+  font-size: 28px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.subtitle {
+
+  text-align: center;
+
+  color: #555;
+
+  margin-bottom: 25px;
+
+}
+
+
+
+h3 {
+
+  margin: 18px 0 10px;
+
+}
+
+
+
+/* INPUTS */
+
+.input-group input,
+
+textarea,
+
+select {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #d7d7d7;
+
+  margin-bottom: 18px;
+
+  font-size: 15px;
+
+}
+
+
+
+textarea {
+
+  height: 90px;
+
+  resize: none;
+
+}
+
+
+
+/* TWO COLUMNS */
+
+.two-col {
+
+  display: flex;
+
+  gap: 25px;
+
+  align-items: flex-start;
+
+}
+
+
+
+.two-col input,
+
+.two-col select {
+
+  width: 100%;
+
+}
+
+
+
+/* CHECKBOX & RADIO ALIGNMENT FIX */
+
+label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+
+  color: #333;
+
+}
+
+
+
+input[type="checkbox"],
+
+input[type="radio"] {
+
+  width: 18px;
+
+  height: 18px;
+
+}
+
+
+
+/* EXPERIENCE GRID */
+
+.experience-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px 25px;
+
+}
+
+
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+
+  width: 100%;
+
+  padding: 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff4bc8, #b45cff);
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-top: 15px;
+
+  cursor: pointer;
+
+}
+
+
+
+.submit-btn:hover {
+
+  opacity: 0.9;
+
+}
+
+.modal-content{
+     background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
