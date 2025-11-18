@@ -21,6 +21,7 @@ html{
     margin: 12px;
     width: 45%;
     margin: auto;
+    line-height: 28px;
     color: rgb(51, 50, 50);
 }
 .buttonArray{
@@ -55,7 +56,7 @@ html{
     height: 380px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    padding: 6px;
+    padding: 16px;
 }
 .mentorImage{
     align-self: center;
@@ -63,16 +64,18 @@ html{
     border-radius: 100%;
     width: 50%;
     height: 40%;
+    margin: 6px 6px 2px;
 }
 .mentorInfo{
     display: block;
     justify-content: center;
-    padding: 10px;
+    padding: 12px;
 }
 .mentorName{
     font-weight: bolder;
     font-family: Outfit;
     font-size: 18px;
+    margin: 6px;
 }
 .mentorButton{
     background-color:rgba(188, 19, 254) ;
@@ -80,6 +83,11 @@ html{
     padding: 6px;
     border: none;
     border-radius: 10%;
+    margin: 6px;
+}
+.mentorBio{
+  color: rgb(49, 48, 48);
+  line-height: 20px;
 }
 #openFormBtn{
     padding: 12px;
@@ -127,8 +135,7 @@ body {
 .container {
 
   max-width: 650px;
-
-  margin: 12px auto;
+  margin: 0 auto;
   display: none; /* Hidden by default */
     position: fixed;
     z-index: 1;
@@ -137,6 +144,10 @@ body {
     overflow: auto;
     background-color: transparent;
 
+}
+.container::-webkit-scrollbar {
+  width: 0px;  /* removes scrollbar space */
+  background: transparent; /* optional: transparent track */
 }
 
 
@@ -242,6 +253,9 @@ textarea {
 .two-col select {
 
   width: 100%;
+  padding: 15px;
+   border-radius: 10px;
+  border: 1px solid #d7d7d7;
 
 }
 
