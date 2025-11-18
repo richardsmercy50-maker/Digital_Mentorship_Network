@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/regular.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+    <style>
+        /* Reset and Base Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 48px; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.logo img {
+    height: 30px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.logo h2 {
+    color: #ff69b4; 
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8A00C4;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #ff69b4;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    position: absolute; 
+    display: none;
+    background-color: #ff69b4;
+    color: #333;
+    min-width: 190px;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+}
+
+.dropdown-content a {
+    color: white;
+}
+
+.dropdown-content li {
+    padding: 10px 20px;
+}
+
+.dropdown-content a:hover {
+    color: #333; 
+}  
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
+.btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-left: 15px;
+}
+
+.btn-sign-in {
+    border: 1px solid #8A00C4;
+    color: #8A00C4;
+    padding: 5px 12px;
+}
+
+.btn-sign-in:hover {
+    border: 1px solid #ff69b4;
+    background-color: #ff69b4;
+    color: white;
+}
+
+.btn-get-started {
+    background-color: #8A00C4;
+    color: white;
+    padding: 7px 20px; 
+}
+
+.btn-get-started:hover {
+    background-color: #ff69b4;
+}
+
+.bars {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .nav-links, .nav-buttons, .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .bars {
+        display: block;
+        color: #8A00C4;
+    }
+
+    .show {
+        display: flex !important;
+        gap: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .nav-buttons a {
+        font-weight: lighter;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar"> 
+            <div class="logo">
+                <img src="../assets/she logo.png" alt="Logo Image">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li> 
+                <li><a href="./MeetOurMentors/mentors.html">Mentors</a></li>
+                <li><a href="">Mentees</a></li>
+                
+                <li class="dropdown"> 
+                    <a href="" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+
+                    <ul class="dropdown-content">
+                        <li><a href="">Resources</a></li>
+                        <li><a href="progress.html">Progress</a></li>
+                        <li><a href="">Join</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="about.html">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>  
+            
+            <div class="nav-buttons">
+                <a href="" class="btn btn-sign-in">Sign In</a>
+                <a href="" class="btn btn-get-started">Get Started</a>
+            </div>
+
+            <div class="bars">
+                <i class="fa-solid fa-bars" id="menuBar"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <script src="./navbar.js"></script>
+</body>
+</html>
