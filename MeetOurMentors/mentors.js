@@ -1,3 +1,28 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filterBtn");
+    const mentors = document.querySelectorAll(".mentor");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const category = button.getAttribute("data-category");
+
+            // Change active button style
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Filter mentors
+            mentors.forEach(mentor => {
+                const tag = mentor.querySelector(".mentorTag").textContent.trim();
+                if (category === "all" || tag === category) {
+                    mentor.style.display = "block";
+                } else {
+                    mentor.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
 const modal = document.getElementById("formModal");
     const openBtn = document.getElementById("openFormBtn");
     const closeBtn = document.querySelector(".close");
@@ -33,9 +58,4 @@ const modal = document.getElementById("formModal");
     .then(response => response.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;
-    });
-  fetch("../navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
     });

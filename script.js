@@ -220,13 +220,6 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     console.log('HerMentor landing page loaded successfully');
 });
-<<<<<<< HEAD
- fetch("../navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-=======
 
 // For the dynamic text content
 const quotes = [
@@ -262,4 +255,3 @@ function slideQuote() {
 
 // Start rotating every 4 seconds
 setInterval(slideQuote, 4000);
->>>>>>> b476edb4d0cf7ded368430ce38edf7f10d770ab4

@@ -1,136 +1,151 @@
-html{
-  html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* prevent horizontal scroll */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    overflow-x: hidden;
+  }
+.mentors-section {
+    margin: 20px auto;
+    padding: 0 20px;
 }
-}
-.body{
-    width: 95%;
-    margin: auto;
-}
-.heading{
+
+.heading h4 {
     text-align: center;
-    margin: 12px;
+    font-size: 26px;
+    margin-bottom: 12px;
     color: rgb(31, 30, 30);
 }
-.intro{
+
+.intro {
     text-align: center;
     font-size: 18px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 12px;
-    width: 45%;
-    margin: auto;
     line-height: 28px;
+    max-width: 700px; /* 🔹 previous 45% broke layout on small screens */
+    margin: 0 auto 35px;
     color: rgb(51, 50, 50);
 }
-.buttonArray{
-    display: flex;
-    justify-content: space-around;
-    width: 75%;
-    margin: 24px auto 48px;
-}
-.buttonArray button{
-    color:rgba(188, 19, 254) ;
-    background-color: white;
-    border: solid 1.5px rgba(188, 19, 254);
-    padding: 6px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.mentorWrapper{
-    margin-top: 12px;
+
+.mentorWrapper {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 24px;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 🔹 FULLY responsive */
+    gap: 28px;
+    justify-items: center;
 }
-@media (max-width: 600px) {
-  .mentorWrapper {
-    flex-direction: column;
-  }
-}
-.mentor{
-    background-color: white;
-    border-radius: 5%;
-    width: 300px;
-    height: 380px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.mentor {
+    background: white;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    padding: 18px 16px;
     text-align: center;
-    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.25s;
 }
-.mentorImage{
-    align-self: center;
-    border: 3px solid rgba(188, 19, 254);
-    border-radius: 100%;
-    width: 50%;
-    height: 40%;
-    margin: 6px 6px 2px;
+
+.mentor:hover {
+    transform: translateY(-5px);
 }
-.mentorInfo{
-    display: block;
-    justify-content: center;
-    padding: 12px;
+
+.mentorImage {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
 }
-.mentorName{
-    font-weight: bolder;
-    font-family: Outfit;
+
+.mentorInfo {
+    padding-top: 6px;
+}
+
+.mentorName {
     font-size: 18px;
-    margin: 6px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
-.mentorButton{
-    background-color:rgba(188, 19, 254) ;
+
+.mentorTag {
+    background-color: #ff69b4;
     color: white;
-    padding: 6px;
     border: none;
-    border-radius: 10%;
-    margin: 6px;
+    padding: 6px 18px;
+    font-size: 14px;
+    border-radius: 30px;
+    margin-bottom: 10px;
 }
-.mentorBio{
-  color: rgb(49, 48, 48);
-  line-height: 20px;
+
+.mentorBio {
+    font-size: 14px;
+    color: rgb(49, 48, 48);
+    line-height: 21px;
+    margin-bottom: 14px;
 }
-#openFormBtn{
-    padding: 12px;
-    color: rgba(188, 19, 254);
-    background-color: white;
-    border: solid 1px rgba(188, 19, 254);
+
+.mentorConnect {
+    background-color: #8A00C4;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
 }
-.checkAllD{
-    margin: 18px 0;
+
+.mentorConnect:hover {
+    background-color: #ff69b4;
+}
+
+.findMentorBtn {
     text-align: center;
+    margin-top: 28px;
+}
+
+#openFormBtn {
+    padding: 12px 24px;
+    background: white;
+    border: 1.5px solid rgba(188, 19, 254);
+    color: rgba(188, 19, 254);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+#openFormBtn:hover {
+    background: rgba(188, 19, 254);
+    color: white;
+}
+
+/* mentors filter section code */
+.filterButtons {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.filterBtn {
+    padding: 8px 18px;
+    border: 1px solid #8A00C4;
+    background: white;
+    color: #8A00C4;
+    margin: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-size: 15px;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+    background: #8A00C4;
+    color: white;
 }
 
 
 /* mentor form styling */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-
-
-
-* {
-
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
-  font-family: "Inter", sans-serif;
-
-}
-
-
-
-body {
-
-  /* background: linear-gradient(135deg, #ff4bc8, #b45cff); */
-
-  padding: 40px;
-
-}
-
-
 
 .container {
 
@@ -139,7 +154,7 @@ body {
   display: none; /* Hidden by default */
     position: fixed;
     z-index: 1;
-    left: 25%; top: 0;
+    left: 25%; top: 10%;
     width: 100%; height: 100%;
     overflow: auto;
     background-color: transparent;
@@ -152,7 +167,7 @@ body {
 
 
 
-form {
+.form {
 
   background: white;
 
@@ -168,7 +183,7 @@ form {
 
 /* HEADINGS */
 
-h2 {
+.FormHead{
 
   text-align: center;
 
@@ -351,9 +366,9 @@ input[type="radio"] {
 }
 
 #footer {
-  width: fit-content;          /* stretch across the page */
-  margin: 0;            /* remove extra margins */
-  padding: 0;           /* optional, adjust as needed */
-  overflow: hidden; 
+  width: 100%;         
+  margin: 0;            
+  padding: 0;           
+  overflow: visible; 
   box-sizing: border-box; 
 }

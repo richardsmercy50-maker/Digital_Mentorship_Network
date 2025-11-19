@@ -1,136 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Page</title>
+    <title>SHE Network | Connect & Grow</title>
     <link rel="stylesheet" href="./network.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+ 
 <body>
-<nav class="navbar">
-        <img src="./images/SHE. 1.png" class="logo"></div>
-        <ul class="menu">
-            <li> Home</li>
-            <li> Mentors</li>
-            <li> Mentees</li>
-            <li> Join</li>
-        </ul>
-        <div class="btn">
-            <button class="connect">Connect</button>
-            <button class="explore">Explore</button>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- Placeholder image used if local file missing -->
+            <img src="../images/sheconnect.jpg" onerror="this.src='https://placehold.co/40x40/8A00C4/white?text=S'" alt="Company Logo">
+            <h2>SHE <span>Connect</Canvas></span></h2>
         </div>
-    </nav>
-    <div class="mainC">
-        <h2 class="network">JOIN THE NETWORK</h2>
-    </div>
-    <!-- <h3 class="jnetwork"> Join the Network</h3> -->
-    <h5 class="networkdetails">Whether you’re here to guide or grow, this is your first step toward meaningful mentors,
-        honest feedback, and opportunities you might not find on your own.
-    </h5>
-    <main>
-        <div class="main_form">
-            <div class="mentorMentee">
-                <button class="mentor">Mentor</button>
-                <button class="mentee">Mentee</button>
+        
+ 
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="../MeetOurMentors/mentors.html">Mentors</a></li>
+                <li><a href="../mentee.html">Mentees</a></li>
+                <li><a href="./networkmain.html">Join</a></li>
+                <li><a href="../testimonies.html">Testimonies</a></li>
+            </ul>
+ 
+            <div class="nav-buttons">
+                <a href="../sign_in.html" class="btn btn-sign-in">Sign In</a>
+                <a href="../get_started.html" class="btn btn-get-started">Get Started</a>
             </div>
-            <div class="details">
-                <h4 class="detail">DETAILS</h4>
-                <form class="basic_details" id="basic_details">
-                    <label class="first_name">First Name</label>
-                    <input id="first_name" type="text" required /> <br>
-
-                    <label class="last_name">Last Name</label>
-                    <input id="last_name" type="text" required /><br>
-
-                    <label class="phone_number">Phone Number</label>
-                    <input id="phone_number" type="tel" required /><br>
-
-                    <label class="Email">Email</label>
-                    <input id="Email" type="email" required /><br>
-
-                    <label class="about_me">About Me</label>
-                    <textarea id="about_me" name="about_me" rows="4" required></textarea><br>
-
-                    <label class="experience">Experience</label>
-                    <textarea id="experience" name="experience" rows="4" required></textarea><br>
-
-                    <label class="goal">Goals</label>
-                    <textarea id="goal" name="goal" rows="4" required></textarea><br>
-
-                    <label class="interest">Select your Interest</label>
-                    <select id="interest">
-                        <option value="FrontEnd"> Frontend</option>
+        </div>
+ 
+        <div class="bars" id="mobileMenuBtn"><i class="fas fa-bars"></i></div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <div class="hero-wrapper">
+        <div class="hero-section">
+            <h1 class="network-title">JOIN THE NETWORK</h1>
+            <p class="network-details">
+                Whether you’re here to guide or grow, this is your first step toward <strong>meaningful mentors</strong>,
+                honest feedback, and <strong>opportunities</strong> you might not find on your own.
+            </p>
+        </div>
+    </div>
+ 
+    <main class="main-content">
+        <!-- Left Column: Join Form -->
+        <section class="join-form-section">
+            <div class="form-card sticky-card">
+                <div class="role-selector">
+                    <button class="role-btn active" type="button">Mentor</button>
+                    <button class="role-btn" type="button">Mentee</button>
+                </div>
+ 
+                <h2 class="form-title">YOUR DETAILS</h2>
+ 
+                <form class="basic-details-form" id="basic_details">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input id="first_name" type="text" required placeholder="Jane" />
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input id="last_name" type="text" required placeholder="Doe" />
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number</label>
+                        <input id="phone_number" type="tel" required placeholder="(555) 555-5555" />
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input id="Email" type="email" required placeholder="jane.doe@example.com" />
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="interest">Select your Interest</label>
+                        <div class="select-wrapper">
+                            <select id="interest">
+                                <option value="" disabled selected>Select an area</option>
+                                <option value="FrontEnd">Frontend Development</option>
+                                <option value="backend">Backend Development</option>
+                                <option value="ui_ux">UI/UX Design</option>
+                                <option value="content_writing">Content Writing</option>
+                                <option value="digital_marketing">Digital Marketing</option>
+                                <option value="quality_assurance">Quality Assurance</option>
+                            </select>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="about_me">About Me</label>
+                        <textarea id="about_me" name="about_me" rows="3" required placeholder="Briefly describe yourself..."></textarea>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="experience">Experience</label>
+                        <textarea id="experience" name="experience" rows="3" required placeholder="Highlight relevant skills..."></textarea>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label for="goal">Goals</label>
+                        <textarea id="goal" name="goal" rows="3" required placeholder="What do you hope to achieve?"></textarea>
+                    </div>
+ 
+                    <button class="submit-btn full-width" type="submit">Join Now</button>
+                </form>
+            </div>
+        </section>
+ 
+        <!-- Right Column: Directory & Resources -->
+        <section class="directory-section">
+            <div class="section-header">
+                <h2 class="section-title">DIRECTORY</h2>
+                <span class="badge">Live</span>
+            </div>
+ 
+            <div class="search-and-filter">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input class="search-input" type="text" placeholder="Search mentors by name or company...">
+                </div>
+ 
+                <div class="filters">
+                    <select id="industry" class="filter-select">
+                        <option value="industry">Filter by Skills</option>
+                        <option value="FrontEnd">Frontend</option>
                         <option value="backend">Backend</option>
                         <option value="ui_ux">UI/UX</option>
-                        <option value="content_writing">Content Writing</option>
-                        <option value="digital_marketing">Digital Marketing</option>
-                        <option value="quality_assurance">Quality Assurance</option>
                     </select>
-            </div>
-            <button class="button_submit" type="submit">Join Now</button>
-            </form>
-        </div>
-        <div class="second_part">
-            <h2 class="directory">DIRECTORY</h2>
-            <input class="search-input" type="text" placeholder="Search for Mentors...">
-
-            <div class="first_section2">
-                <h5 class="skills">Skills</h5>
-                <select id="industry">
-                    <option value="industry"> Industry</option>ß
-                    <option value="FrontEnd"> Frontend</option>
-                    <option value="backend">Backend</option>
-                    <option value="ui_ux">UI/UX</option>
-                    <option value="content_writing">Content Writing</option>
-                    <option value="digital_marketing">Digital Marketing</option>
-                    <option value="quality_assurance">Quality Assurance</option>
-                </select>
-                <select id="goals">
-                    <option value="industry"> Goals</option>
-                    <option value="FrontEnd"> text</option>
-                    <option value="backend">text</option>
-                    <option value="ui_ux">text</option>
-                </select>
-            </div>
-            <div class="second_section">
-                <div class="first_box">
-                    <img src="./images/headshot.png" class="headshot" width="45px" height="45px" />
-                    <h4 class="name">Musa Taiwo</h4>
-                    <h5 class="skill">Frontend Engineer</h5>
-                    <p>Hard Skills: HTML, CSS, Javascript, React</p>
-                </div>
-
-                <div class="second_box">
-                    <img src="./images/headshot.png" width="45px" height="45px" />
-
-                    <h4 class="name">Francis Umeh</h4>
-                    <h5 class="skill">Backend Engineer</h5>
-                    <p>Hard Skills: Java, Springboot, Javascript</p>
-                </div>
-
-                <div class="third_box">
-                    <img src="./images/headshot.png" width="45px" height="45px" />
-
-                    <h4 class="name">Adanna Micheal</h4>
-                    <h5 class="skill">QA Engineer</h5>
-                    <p>Hard Skills: Cypress, Selenium, Java</p>
+                    <select id="goals" class="filter-select">
+                        <option value="goals">Filter by Goals</option>
+                        <option value="text1">Professional Growth</option>
+                        <option value="text2">Skill Acquisition</option>
+                    </select>
                 </div>
             </div>
-            <h3 class="resources">RESOURCES & TIPS</h3>
-
-            <div class="fourth_box">
-                <img class="img4" src="./images/goal.png" width="45px" height="45px" />
-                <a class="name4" href="https://example.com"> GOAL SETTING</a>
-                <h5 class="skill4">Guide</h5>
-                <p class="p4">CHAMP</p>
+ 
+            <div class="mentor-cards-grid">
+                <!-- Card 1 -->
+                <div class="mentor-card">
+                    <div class="card-header">
+                        <img src="./images/headshot.png" onerror="this.src='https://placehold.co/60x60/png'" alt="Musa Taiwo" class="headshot" />
+                        <div class="name-title">
+                            <h3 class="mentor-name">Musa Taiwo</h3>
+                            <p class="mentor-role">Frontend Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="skills-label">Top Skills:</p>
+                        <div class="tags-container">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                    <button class="connect-card-btn">Connect <i class="fas fa-arrow-right"></i></button>
+                </div>
+ 
+                <!-- Card 2 -->
+                <div class="mentor-card">
+                    <div class="card-header">
+                        <img src="./images/headshot.png" onerror="this.src='https://placehold.co/60x60/png'" alt="Francis Umeh" class="headshot" />
+                        <div class="name-title">
+                            <h3 class="mentor-name">Francis Umeh</h3>
+                            <p class="mentor-role">Backend Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="skills-label">Top Skills:</p>
+                        <div class="tags-container">
+                            <span class="tag">Java</span>
+                            <span class="tag">Springboot</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                    <button class="connect-card-btn">Connect <i class="fas fa-arrow-right"></i></button>
+                </div>
+ 
+                <!-- Card 3 -->
+                <div class="mentor-card">
+                    <div class="card-header">
+                        <img src="./images/headshot.png" onerror="this.src='https://placehold.co/60x60/png'" alt="Adanna Micheal" class="headshot" />
+                        <div class="name-title">
+                            <h3 class="mentor-name">Adanna Micheal</h3>
+                            <p class="mentor-role">QA Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="skills-label">Top Skills:</p>
+                        <div class="tags-container">
+                            <span class="tag">Cypress</span>
+                            <span class="tag">Selenium</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                    <button class="connect-card-btn">Connect <i class="fas fa-arrow-right"></i></button>
+                </div>
             </div>
-        </div>
+ 
+            <div class="resources-container">
+                <h2 class="section-title resources-title">RESOURCES & TIPS</h2>
+ 
+                <div class="resource-card">
+                    <div class="resource-icon-box">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="resource-info">
+                        <a class="resource-link" href="../resources.html" target="_blank">Goal Setting Framework</a>
+                        <span class="resource-meta">Guide • Source: CHAMP</span>
+                    </div>
+                    <div class="action-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+ 
+    <script>
+        // Simple script to toggle mobile menu
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+ 
+        mobileBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+ 
+        // Simple script to toggle role buttons
+        const roleBtns = document.querySelectorAll('.role-btn');
+        roleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                roleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
 </body>
-
 </html>
