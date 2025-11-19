@@ -1,0 +1,306 @@
+:root {
+    --purple: #8A00C4;
+    --purple-light: #f3e6fa;
+    --pink: #ff69b4;
+    --pink-light: #ffebf5;
+    --text-dark: #1e293b;
+    --text-gray: #64748b;
+    --bg-body: #F8FAFC;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, var(--purple), var(--pink));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.logo h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: #ff69b4
+}
+
+/* Step Indicator */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.step.active {
+    background: var(--gradient);
+    color: white;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background: #e2e8f0;
+}
+
+.help-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Main Container --- */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+/* --- Cards Layout --- */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Hide the actual radio button */
+.card-input {
+    display: none;
+}
+
+.role-card {
+    flex: 1;
+    max-width: 400px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Icons */
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.mentor-icon {
+    background-color: var(--purple-light);
+    color: var(--purple);
+}
+
+.mentee-icon {
+    background-color: var(--pink-light);
+    color: var(--pink);
+}
+
+/* Typography */
+.role-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.role-desc {
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefits-list li i {
+    color: #10b981; /* Green for checkmark */
+}
+
+/* Button inside card */
+.select-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 1px solid #e2e8f0;
+    font-weight: 600;
+    color: var(--text-gray);
+    transition: 0.3s;
+}
+
+/* --- Hover State --- */
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* --- Selected State (Logic based on Checked Input) --- */
+/* Mentor Selected */
+.mentor-card:has(.card-input:checked) {
+    border-color: var(--purple);
+    background-color: #fdfaff;
+}
+
+.mentor-card:has(.card-input:checked) .select-btn {
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+
+.mentor-card:has(.card-input:checked) .icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* Mentee Selected */
+.mentee-card:has(.card-input:checked) {
+    border-color: var(--pink);
+    background-color: #fff5fa;
+}
+
+.mentee-card:has(.card-input:checked) .select-btn {
+    background-color: var(--pink);
+    color: white;
+    border-color: var(--pink);
+}
+
+.mentee-card:has(.card-input:checked) .icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* --- Bottom Action Area --- */
+.action-area {
+    text-align: center;
+}
+
+.btn-continue {
+    background: #cbd5e1; /* Disabled color */
+    color: white;
+    border: none;
+    padding: 15px 60px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: not-allowed;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn-continue.active {
+    background: var(--gradient);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(138, 0, 196, 0.3);
+}
+
+.btn-continue.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 0, 196, 0.4);
+}
+
+.switch-note {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role-card {
+        width: 100%;
+    }
+
+    .step-indicator {
+        display: none; /* Hide steps on small screens to save space */
+    }
+    
+    .header-text h1 {
+        font-size: 2rem;
+    }
+}

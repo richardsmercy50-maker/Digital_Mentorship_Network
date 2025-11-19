@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | SheConnect</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="sign_in.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Left Side: Form -->
+            <div class="login-form-section">
+                <div class="brand-header">
+                    <!-- Replace with your logo image or keep text -->
+                    <h2>SHE<span>Connect</span></h2>
+                </div>
+
+                <div class="header-text">
+                    <h1 id="welcome-text">Welcome Back!</h1>
+                    <p>Please enter your details to sign in.</p>
+                </div>
+
+                <!-- Role Switcher -->
+                <div class="role-toggle-container">
+                    <button class="role-btn active" id="btn-mentor" onclick="setRole('mentor')">
+                        As Mentor
+                    </button>
+                    <button class="role-btn" id="btn-mentee" onclick="setRole('mentee')">
+                        As Mentee
+                    </button>
+                </div>
+
+                <form class="signin-form" action="#">
+                    <!-- Email Input -->
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="email" placeholder="jane@example.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon"></i>
+                            <input type="password" id="password" placeholder="••••••••" required>
+                            <i class="fas fa-eye toggle-password"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Sign In</button>
+
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button type="button" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </button>
+                    </div>
+                </form>
+
+                <p class="signup-link">
+                    Don't have an account? <a href="get_started.html">Get started!</a>
+                </p>
+            </div>
+
+            <!-- Right Side: Visual/Art -->
+            <div class="login-visual-section">
+                <div class="visual-content">
+                    <h2>Empower. Connect. Grow.</h2>
+                    <p>Join a community of amazing women lifting each other up through mentorship and shared knowledge.</p>
+                    <div class="glass-card">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Active Mentors</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2k+</h3>
+                            <p>Connections</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle Role Toggling
+        function setRole(role) {
+            const mentorBtn = document.getElementById('btn-mentor');
+            const menteeBtn = document.getElementById('btn-mentee');
+            const welcomeText = document.getElementById('welcome-text');
+
+            if (role === 'mentor') {
+                mentorBtn.classList.add('active');
+                menteeBtn.classList.remove('active');
+                welcomeText.innerText = "Welcome, Mentor!";
+            } else {
+                menteeBtn.classList.add('active');
+                mentorBtn.classList.remove('active');
+                welcomeText.innerText = "Welcome, Mentee!";
+            }
+        }
+    </script>
+</body>
+</html>
