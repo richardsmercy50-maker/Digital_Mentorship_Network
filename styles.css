@@ -219,12 +219,18 @@ body {
     align-items: center;
     gap: 0.5rem;
 }
+.btn-secondary a{
+    text-decoration: none;
+}
 
 .btn-secondary:hover {
     border-color: #ff69b4;
     color: #FFFFFF;
     background-color: #ff69b4;
     transform: translateY(-3px);
+}
+.btn-secondary a:hover{
+    color: white;
 }
 
 .btn-large {

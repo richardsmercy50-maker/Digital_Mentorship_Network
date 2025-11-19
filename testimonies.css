@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+ 
+.testimonies {
+   background:linear-gradient(135deg,rgba(255, 78, 199, 0.8),rgba(177, 59, 255, 0.8), rgba(123, 43, 253, 0.8));
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+ 
+.heading .title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+ 
+.heading .subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+}
+ 
+ 
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+ 
+.card {
+  display : flex ;
+  flex-direction : column ;
+  align-items: left;
+  text-align : center;
+  max-width: 350px;
+  height:450px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  flex: 1;
+  min-width: 260px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.02); 
+  padding-top:17px;
+  padding-bottom:17px; 
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.quote-icon {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left ;
+  padding-left :25px;
+}
+ 
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+  text-align : left ;
+  padding-left :25px;
+}
+ 
+.message {
+  font-size: 15px;
+  margin: 15px 0;
+  line-height: 1.4;
+  text-align : left ;
+  padding-left :25px;
+}
+ 
+.author {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 15px;
+  text-align :left;
+  padding-left:25px;
+}
+ 
+.background{
+    width:100%;
+    /* height:1100px; */
+}
+.testimony-wrapper{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.up{
+    display : flex ;
+    flex-direction : column ;
+    align-items: left;
+    text-align : center;
+    height:450px;
+    min-width:260px;
+    max-width:350px;
+    border-radius:20px;
+    background: linear-gradient(
+  135deg,
+  rgba(200, 166, 255, 0.4),
+  rgba(247, 161, 215, 0.2),
+  rgba(243, 217, 255, 0.3)
+); box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    0 2px 6px rgba(0, 0, 0, 0.02);
+    flex: 1;
+    min-width: 260px;
+    padding-top:17px;
+    padding-bottom:17px;
+    
+}
+.up:hover{
+    transform: translateY(-5px);
+}
+.text11{
+    color:white;
+    font-size:15px;
+    text-align: left;
+    padding-left:25px;
+    line-height:1.4;
+}
+ 
+ 
+/* Responsiveness */
+@media (max-width: 768px) {
+.cards {
+    flex-direction: column;
+    align-items: center;
+  }
+.testimony-wrapper{
+    flex-direction: column ;
+    align-items :center;
+  }
+}

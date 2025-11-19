@@ -4,69 +4,281 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./mentors.css"/>
+     <link rel="stylesheet" href="../styles.css">
     <title>Meet Our Mentors</title>
+    
+    <style>
+      /* FOOTER STYLES */
+      body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        background: #fff;
+      }
+      #must {
+        /* Note: Ensure this path exists: /assets/firm-handshake.jpg */
+        background: url(/assets/firm-handshake.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 50vh;
+      }
+      .logo {
+        width: 150px;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      .footer {
+        background-color: #0e1623c1;
+        color: #d8dee9;
+        padding: 60px 40px 30px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+
+      .footer-column {
+        flex: 1 1 200px;
+      }
+
+      .footer-column h3,
+      .footer-column h4 {
+        margin: 0 0 20px;
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .footer-column p {
+        max-width: 230px;
+        line-height: 1.6;
+        font-size: 15px;
+        color: #c5cbd6;
+      }
+
+      .footer-column ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 12px;
+      }
+
+      .footer-column ul li a {
+        text-decoration: none;
+        color: #c5cbd6;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: #ffffff;
+      }
+
+      .footer-line {
+        width: 100%;
+        height: 1px;
+        background: #1f2937;
+        margin: 40px 0 25px;
+      }
+
+      .footer-bottom {
+        max-width: 100%;
+        flex-wrap: wrap;
+        color: #c5cbd6;
+        font-size: 14px;
+        background-color: #1f2937;
+        padding-bottom: 20px;
+      }
+      .foot-icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      </style>
 </head>
 <body>
-    <div id="navbar"></div>
-    <div class="body">
-
-        <div class="heading">
-            <h4>Meet Our Expert Mentors</h4>
+      <!-- Navigation (Preserved from collaborator's work) -->
+    <nav class="navbar"> 
+        <div class="logo">
+            <img src="../images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
         </div>
-        <div class="intro">
-            <p>Our mentors come from diverse backgrounds — from STEM to business and beyond — ready to guide you toward your goals.</p>
-        </div>
-        <div class="buttonArray">
-            <button>STEM</button>
-            <button>Business</button>
-            <button>Art</button>
-            <button>Finance</button>
-            <button>Personal Development</button>
-        </div>
-        <!-- Mentors card display -->
-         <div class="mentorWrapper">
-            <!-- Mentor 1 card -->
-            <div class="mentor">
-                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
-                <div class="mentorInfo">
-                    <p class="mentorName">Maria Kim</p>
-                    <button class="mentorButton">STEM</button>
-                    <p class="mentorBio">A biomedical engineer passionate about mentoring young innovators in science and tech.</p>
-                    <button class="mentorButton">CONNECT</button>
-                </div>
-    
-            </div>
-            <div class="mentor">
-                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
-                <div class="mentorInfo">
-                    <p class="mentorName">Sarah Jones</p>
-                    <button class="mentorButton">Art</button>
-                    <p class="mentorBio">Visual artist and creative coach guiding mentees in building artistic careers.</p>
-                    <button class="mentorButton">CONNECT</button>
-                </div>
-    
-            </div>
-            <div class="mentor">
-                <img src="./Images/Mentor1F.jpg" class="mentorImage"/>
-                <div class="mentorInfo">
-                    <p class="mentorName">Michael Lee</p>
-                    <button class="mentorButton">Business</button>
-                    <p class="mentorBio">Startup strategist helping aspiring entrepreneurs turn ideas into scalable ventures.</p>
-                    <button class="mentorButton">CONNECT</button>
-                </div>
-            </div>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li> 
+            <li><a href="/MeetOurMentors/mentors.html">Mentors</a></li>
+            <li><a href="../mentee.html">Mentees</a></li>
+                
+            <li class="dropdown"> 
+                <a href="" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+                
+                <ul class="dropdown-content">
+                    <li><a href="../resources.html">Resources</a></li>
+                    <li><a href="../progress.html">Progress</a></li>
+                    <li><a href="../network page/networkmain.html">Join</a></li>
+                    <li><a href="../testimonies.html">Testimonies</a></li>
+                </ul>
+            </li>
             
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../about.html#contact">Contact</a></li>
+        </ul>  
+        
+        <div class="nav-buttons">
+            <a href="../sign_in.html" class="btn btn-sign-in">Sign In</a>
+            <a href="../get_started.html" class="btn btn-get-started">Get Started</a>
         </div>
-        <div class="checkAllD">
-            <button id="openFormBtn">Find A Mentor</button>
+        
+        <div class="bars">
+            <i class="fa-solid fa-bars" id="menuBar"></i>
         </div>
+    </nav>
+
+   <!-- Meet Our Mentors Section -->
+<section class="mentors-section">
+
+    <div class="heading">
+        <h4>Meet Our Expert Mentors</h4>
+    </div>
+
+    <p class="intro">
+        Our mentors come from diverse backgrounds — from STEM to business and beyond — ready to guide you toward your goals.
+    </p>
+
+    <div class="filterButtons">
+    <button class="filterBtn" data-category="all">All</button>
+    <button class="filterBtn" data-category="STEM">STEM</button>
+    <button class="filterBtn" data-category="Art">Art</button>
+    <button class="filterBtn" data-category="Business">Business</button>
+    </div>
+
+    <div class="mentorWrapper">
+        <!-- Mentor Card 1 -->
+        <div class="mentor">
+            <img src="./Images/Mentor1F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Aaliyah Thompson</p>
+                <button class="mentorTag">STEM</button>
+                <p class="mentorBio">
+                    A biomedical engineer passionate about mentoring young innovators in science & tech.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 2 -->
+        <div class="mentor">
+            <img src="./Images/Mentor2F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Sarah Jones</p>
+                <button class="mentorTag">Art</button>
+                <p class="mentorBio">
+                    Visual artist and creative coach guiding mentees in building artistic careers.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 3 -->
+        <div class="mentor">
+            <img src="./Images/Mentor4F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Imani Brooks</p>
+                <button class="mentorTag">Business</button>
+                <p class="mentorBio">
+                    Startup strategist helping aspiring entrepreneurs turn ideas into scalable ventures.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 4 -->
+        <div class="mentor">
+            <img src="./Images/Mentor5F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Zuri Anderson</p>
+                <button class="mentorTag">STEM</button>
+                <p class="mentorBio">
+                    A biomedical engineer passionate about mentoring young innovators in science & tech.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 5 -->
+        <div class="mentor">
+            <img src="./Images/Mentor6F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Makayla Johnson</p>
+                <button class="mentorTag">Art</button>
+                <p class="mentorBio">
+                    Visual artist and creative coach guiding mentees in building artistic careers.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 6 -->
+        <div class="mentor">
+            <img src="./Images/Mentor7F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Jane Daniels</p>
+                <button class="mentorTag">Business</button>
+                <p class="mentorBio">
+                    Startup strategist helping aspiring entrepreneurs turn ideas into scalable ventures.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 7 -->
+        <div class="mentor">
+            <img src="./Images/Mentor8F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Leah Carter</p>
+                <button class="mentorTag">STEM</button>
+                <p class="mentorBio">
+                   A biomedical engineer passionate about mentoring young innovators in science & tech.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+
+        <!-- Mentor Card 8 -->
+        <div class="mentor">
+            <img src="./Images/Mentor9F.jpg" class="mentorImage" alt="Mentor Image">
+            <div class="mentorInfo">
+                <p class="mentorName">Kiana Williams</p>
+                <button class="mentorTag">Art</button>
+                <p class="mentorBio">
+                    Visual artist and creative coach guiding mentees in building artistic careers.
+                </p>
+                <button class="mentorConnect">CONNECT</button>
+            </div>
+        </div>
+    </div>
+
+     
+    <div class="findMentorBtn">
+        <button id="openFormBtn">Find A Mentor</button>
+    </div>
+    </section>
     
         <!-- Mentors form -->
         <div id="formModal" class="container modal">
     
-            <form id="mentorForm" class="modal-content">
-                <div>
-                    <h2 style="">Meet Our Mentors</h2>
+            <form id="mentorForm" class="modal-content form">
+                <div style="display: flex; margin-left: 28px; justify-content: space-evenly;">
+                    <h2 class="FormHead">Meet Our Mentors</h2>
                     <span class="close" style="cursor: pointer;">&times;</span>
                 </div>
                 <p class="subtitle">Find the perfect mentor to support your journey.</p>
@@ -146,12 +358,61 @@
     
             </form>
         </div>
-    </div>
-    <div id="footer"></div>
-
-
-
-
+    <section id="must">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-column">
+              <h3>SheConnect</h3>
+              <p>Empowering women through meaningful mentorship connections.</p>
+            </div>
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <ul>
+                <li><a href="#">Find a Mentor</a></li>
+                <li><a href="#">Become a Mentor</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-line"></div>
+        </footer>
+    </section>
+      
+    <section class="footer-bottom">
+        <footer class="foot-icon">
+          <div class="logo">
+            <img src="/assets/she logo.png" alt="she logo" />
+          </div>
+          <div>
+            <p>© 2025 Digital Mentorship Network. All rights reserved</p>
+          </div>
+          <div>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-x"></i>
+            <i class="bi bi-instagram"></i>
+          </div>
+        </footer>
+    </section>
     <script src="mentors.js"></script>
 </body>
 </html>

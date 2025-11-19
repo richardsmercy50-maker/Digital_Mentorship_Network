@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentees Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+    }
+
+    /* Hero Section */
+    /* Hero Section */
+.hero {
+  height: 60vh; /* take up 60% of viewport height */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url('./MeetOurMentors/Images/MenteesHero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff4bc8, #b45cff);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #1a5edb;
+}
+
+
+    /* Search Bar */
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Mentee Grid */
+    .mentees-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      align-self: center;
+      width: 70%;
+      height: 50%;
+      margin: 6px 6px 15px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      font-size: 0.9em;
+      color: #555;
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      color:white ;
+      background: linear-gradient(135deg, #ff4bc8, #b45cff);
+      border: none;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .card button a{
+        text-decoration: none;
+        background: linear-gradient(135deg, #ff4bc8, #b45cff);
+        color: white;
+    }
+
+    /* Footer */
+         /* Footer Styles (Consistent) */
+        .footer { background-color: #0e1623c1; color: #d8dee9; padding: 60px 40px 30px; margin-top: auto; }
+        .footer-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; }
+        .footer-column { flex: 1 1 200px; }
+        .footer-column h3, .footer-column h4 { color: #ffffff; font-weight: 600; margin-bottom: 20px;}
+        .footer-column ul { list-style: none; padding: 0; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { text-decoration: none; color: #c5cbd6; transition: 0.3s; }
+        .footer-column ul li a:hover { color: #ffffff; }
+        .footer-line { width: 100%; height: 1px; background: #1f2937; margin: 40px 0 25px; }
+        .footer-bottom { background-color: #1f2937; padding-bottom: 20px; }
+        .foot-icon { display: flex; justify-content: space-around; align-items: center; color: #c5cbd6; }
+        .footer-logo img { width: 150px; margin-left: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+    <!-- NavBar  -->
+     <nav class="navbar"> 
+        <div class="logo">
+            <img src="images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="/MeetOurMentors/mentors.html">Mentors</a></li>
+            <li><a href="/mentee.html">Mentees</a></li>
+                
+            <li class="dropdown"> 
+                <a href="" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/progress.html">Progress</a></li>
+                     <li><a href="/network page/networkmain.html">Join</a></li>
+                     <li><a href="./testimonies.html">Testimonies</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+        </ul>  
+            
+        <div class="nav-buttons">
+            <a href="./sign_in.html" class="btn btn-sign-in">Sign In</a>
+            <a href="./get_started.html" class="btn btn-get-started">Get Started</a>
+        </div>
+
+        <div class="bars">
+            <i class="fa-solid fa-bars" id="menuBar"></i>
+        </div>
+    </nav>
+
+
+  <!-- Hero Section -->
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Meet Our Mentees</h1>
+    <p>Bright minds learning, growing, and building the future together.</p>
+    <button><a href="./mentee.html#menteesGrid" style="text-decoration: none; color: white;">Explore Profiles</a></button>
+  </div>
+</section>
+
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search mentees by name or skill...">
+  </div>
+
+  <!-- Mentees Grid -->
+  <section class="mentees-grid" id="menteesGrid">
+    <div class="card">
+      <img src="./MeetOurMentors/Images/Mentees1.jpg" alt="Mentee Photo">
+      <h3>Emily Hwang</h3>
+      <p>Frontend Developer in training</p>
+      <button><a href="/profile.html">View Profile</a></button>
+    </div>
+
+    <div class="card">
+      <img src="./MeetOurMentors/Images/Mentees2.jpg" alt="Mentee Photo">
+      <h3>Aisha Bello</h3>
+      <p>Data Science Enthusiast</p>
+      <button><a href="/profile.html">View Profile</a></button>
+    </div>
+
+    <div class="card">
+      <img src="./MeetOurMentors/Images/Mentees3.jpg" alt="Mentee Photo">
+      <h3>Mary Johnson</h3>
+      <p>UI/UX Designer</p>
+      <button><a href="/profile.html">View Profile</a></button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="must">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-column">
+              <h3>SheConnect</h3>
+              <p>Empowering women through meaningful mentorship connections.</p>
+            </div>
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <ul>
+                <li><a href="#">Find a Mentor</a></li>
+                <li><a href="#">Become a Mentor</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-line"></div>
+        </footer>
+    </section>
+      
+    <section class="footer-bottom">
+        <footer class="foot-icon">
+          <div class="footer-logo">
+            <img src="images/sheconnect.jpg" alt="she logo" />
+          </div>
+          <div>
+            <p>© 2025 Digital Mentorship Network. All rights reserved</p>
+          </div>
+          <div>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-x"></i>
+            <i class="bi bi-instagram"></i>
+          </div>
+        </footer>
+    </section>
+
+
+</body>
+</html>

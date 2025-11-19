@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SheConnect - About & Contact</title>
+<link rel="stylesheet" href="../styles.css">
 <style>
 /* ─────────── GENERAL STYLES ─────────── */
 body {
@@ -287,15 +288,42 @@ input:focus, textarea:focus {
 <body>
 
 <!-- NAVBAR -->
-<div class="nav-bar">
-  <div class="hamburger" id="hamburger">
-    <div class="bar bar1"></div>
-    <div class="bar bar2"></div>
-    <div class="bar bar3"></div>
-  </div>
+ <!-- Navigation (Preserved from collaborator's work) -->
 
-  <img src= 'C:\Users\user\Downloads\Project_Techsters\Project_Techsters\images\SheLOGO.png' class="logo" alt="SheConnect Logo">
-</div>
+    <nav class="navbar"> 
+        <div class="logo">
+            <img src="../images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li> 
+            <li><a href="../MeetOurMentors/mentors.html">Mentors</a></li>
+            <li><a href="../mentee.html">Mentees</a></li>
+                
+            <li class="dropdown"> 
+                <a href="" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+                
+                <ul class="dropdown-content">
+                    <li><a href="../index.html#second-hero1">Resources</a></li>
+                    <li><a href="../progress.html">Progress</a></li>
+                    <li><a href="./networkmain.html">Join</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../about.html#contact">Contact</a></li>
+        </ul>  
+        
+        <div class="nav-buttons">
+            <a href="" class="btn btn-sign-in">Sign In</a>
+            <a href="" class="btn btn-get-started">Get Started</a>
+        </div>
+        
+        <div class="bars">
+            <i class="fa-solid fa-bars" id="menuBar"></i>
+        </div>
+    </nav>
 
 <!-- Slide Menu -->
 <div class="menu" id="menu">
@@ -392,6 +420,7 @@ input:focus, textarea:focus {
     </div>
   </div>
 </section>
+<div id="footer"></div>
 
 <script>
 // Hamburger toggle
@@ -424,64 +453,11 @@ function changeQuote() {
 }
 setInterval(changeQuote, 5000);
 changeQuote();
+  fetch("../footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
 </body>
 </html>
-
-// FOOTER//
-
-<section id="must">
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-column">
-            <h3>SheConnect</h3>
-            <p>Empowering women through meaningful mentorship connections.</p>
-          </div>
-          <div class="footer-column">
-            <h4>Platform</h4>
-            <ul>
-              <li><a href="#">Find a Mentor</a></li>
-              <li><a href="#">Become a Mentor</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">Guidelines</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-line"></div>
-      </footer>
-    </section>
-    
-    <section class="footer-bottom">
-      <footer class="foot-icon">
-        <div class="logo">
-          <img src="/assets/she logo.png" alt="she logo" />
-        </div>
-        <div >
-          <p>© 2025 Digital Mentorship Network. All rights reserved</p>
-        </div>
-        <div>
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-whatsapp"></i>
-          <i class="bi bi-x"></i>
-          <i class="bi bi-instagram"></i>
-        </div>
-    </section>
-     </footer>
