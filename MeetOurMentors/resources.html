@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./resources.css"/>
+    <title>Resources - SheConnect</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar"> 
+        <div class="logo">
+            <img src="images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="mentees.html">Mentees</a></li>
+                
+            <li class="dropdown"> 
+                <a href="#" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+
+                <ul class="dropdown-content">
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="Progress.html">Progress</a></li>
+                    <li><a href="network.html">Join</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>  
+            
+        <div class="nav-buttons">
+            <a href="#" class="btn btn-sign-in">Sign In</a>
+            <a href="#" class="btn btn-get-started">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Learning Resources</h1>
+            <p>Empower your journey with curated guides, tools, and materials designed to help you grow personally and professionally.</p>
+        </div>
+    </section>
+
+    <!-- Resource Categories -->
+    <section class="categories-section">
+        <h2>Browse by Category</h2>
+        <div class="category-grid">
+            <div class="category-card active" data-category="all">
+                <i class="fas fa-th-large"></i>
+                <h3>All Resources</h3>
+            </div>
+            <div class="category-card" data-category="career">
+                <i class="fas fa-briefcase"></i>
+                <h3>Career Development</h3>
+            </div>
+            <div class="category-card" data-category="skills">
+                <i class="fas fa-code"></i>
+                <h3>Technical Skills</h3>
+            </div>
+            <div class="category-card" data-category="personal">
+                <i class="fas fa-heart"></i>
+                <h3>Personal Growth</h3>
+            </div>
+            <div class="category-card" data-category="leadership">
+                <i class="fas fa-users"></i>
+                <h3>Leadership</h3>
+            </div>
+            <div class="category-card" data-category="finance">
+                <i class="fas fa-dollar-sign"></i>
+                <h3>Finance & Business</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section class="resources-section">
+        <div class="resources-container">
+            
+            <!-- Resource Card 1 -->
+            <div class="resource-card" data-category="career">
+                <div class="resource-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Career</span>
+                    <h3>Resume Building Guide</h3>
+                    <p>Learn how to craft a professional resume that stands out to employers with proven templates and tips.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 15 min read</span>
+                        <span><i class="fas fa-download"></i> PDF</span>
+                    </div>
+                    <a href="#" class="resource-btn">Download <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 2 -->
+            <div class="resource-card" data-category="skills">
+                <div class="resource-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Technical Skills</span>
+                    <h3>Coding Fundamentals Course</h3>
+                    <p>Master the basics of programming with interactive video lessons and hands-on projects.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 3 hours</span>
+                        <span><i class="fas fa-play-circle"></i> Video</span>
+                    </div>
+                    <a href="#" class="resource-btn">Watch Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 3 -->
+            <div class="resource-card" data-category="personal">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Personal Growth</span>
+                    <h3>Goal Setting Workbook</h3>
+                    <p>A comprehensive workbook to help you set, track, and achieve your personal and professional goals.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 30 min</span>
+                        <span><i class="fas fa-file-alt"></i> Workbook</span>
+                    </div>
+                    <a href="#" class="resource-btn">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 4 -->
+            <div class="resource-card" data-category="leadership">
+                <div class="resource-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Leadership</span>
+                    <h3>Effective Communication for Leaders</h3>
+                    <p>Develop essential communication skills to inspire and lead teams effectively in any environment.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 20 min read</span>
+                        <span><i class="fas fa-file-pdf"></i> Guide</span>
+                    </div>
+                    <a href="#" class="resource-btn">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 5 -->
+            <div class="resource-card" data-category="finance">
+                <div class="resource-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Finance</span>
+                    <h3>Personal Finance 101</h3>
+                    <p>Learn budgeting, saving, and investing basics to build a secure financial future.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 25 min</span>
+                        <span><i class="fas fa-book-open"></i> eBook</span>
+                    </div>
+                    <a href="#" class="resource-btn">Download <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 6 -->
+            <div class="resource-card" data-category="career">
+                <div class="resource-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Career</span>
+                    <h3>Interview Preparation Toolkit</h3>
+                    <p>Ace your next interview with our comprehensive guide covering common questions and best practices.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-file-pdf"></i> PDF</span>
+                    </div>
+                    <a href="#" class="resource-btn">Access Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 7 -->
+            <div class="resource-card" data-category="skills">
+                <div class="resource-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Technical Skills</span>
+                    <h3>Design Thinking Workshop</h3>
+                    <p>Explore creative problem-solving techniques used by top designers and innovators worldwide.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 2 hours</span>
+                        <span><i class="fas fa-video"></i> Workshop</span>
+                    </div>
+                    <a href="#" class="resource-btn">Join Workshop <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 8 -->
+            <div class="resource-card" data-category="personal">
+                <div class="resource-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Personal Growth</span>
+                    <h3>Mindfulness & Well-being Guide</h3>
+                    <p>Discover techniques for reducing stress, improving focus, and maintaining mental wellness.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 10 min read</span>
+                        <span><i class="fas fa-file-alt"></i> Article</span>
+                    </div>
+                    <a href="#" class="resource-btn">Read Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Resource Card 9 -->
+            <div class="resource-card" data-category="leadership">
+                <div class="resource-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="resource-content">
+                    <span class="resource-tag">Leadership</span>
+                    <h3>Building High-Performance Teams</h3>
+                    <p>Learn strategies for creating collaborative, motivated teams that achieve exceptional results.</p>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-clock"></i> 35 min</span>
+                        <span><i class="fas fa-book"></i> Guide</span>
+                    </div>
+                    <a href="#" class="resource-btn">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Can't Find What You're Looking For?</h2>
+            <p>Request specific resources or suggest topics you'd like us to cover. We're here to support your growth!</p>
+            <button class="cta-btn">Request a Resource</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 SheConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="resources.js"></script>
+</body>
+</html>

@@ -3,10 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./progress.css"/>
-    <title>Progress Tracker</title>
+    <title>Track Progress - SheConnect</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/brands.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/regular.css">
+    <link rel="stylesheet" href="css/solid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+    <style>
+        /* -----------------------------------------------------
+           PAGE SPECIFIC STYLES
+           ----------------------------------------------------- */
+        
+        /* Ensure content pushes footer down */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Tracker Section Styling */
+        .tracker-section {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 60px 20px;
+            flex: 1; /* Pushes footer to bottom */
+        }
+
+        .tracker-section h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .tracker-section .center {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .tracker-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white; 
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .step {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .step:hover {
+            background-color: #fcfcfc;
+            border-color: #ddd;
+        }
+
+        .step label {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .step input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #8A00C4; /* Matches your brand purple */
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background: #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #8A00C4, #ff69b4); /* Brand Gradient */
+            transition: width 0.6s ease-in-out;
+        }
+
+        #generateCert {
+            padding: 15px 30px;
+            border: none;
+            background: #8A00C4;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        #generateCert:hover {
+            background: #ff69b4;
+        }
+
+        #generateCert:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+        .certificate {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e8ffe8;
+            border: 1px solid #4caf50;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer Styles (Consistent) */
+        .footer { background-color: #0e1623c1; color: #d8dee9; padding: 60px 40px 30px; margin-top: auto; }
+        .footer-container { max-width: 1200px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 50px; }
+        .footer-column { flex: 1 1 200px; }
+        .footer-column h3, .footer-column h4 { color: #ffffff; font-weight: 600; margin-bottom: 20px;}
+        .footer-column ul { list-style: none; padding: 0; }
+        .footer-column ul li { margin-bottom: 12px; }
+        .footer-column ul li a { text-decoration: none; color: #c5cbd6; transition: 0.3s; }
+        .footer-column ul li a:hover { color: #ffffff; }
+        .footer-line { width: 100%; height: 1px; background: #1f2937; margin: 40px 0 25px; }
+        .footer-bottom { background-color: #1f2937; padding-bottom: 20px; }
+        .foot-icon { display: flex; justify-content: space-around; align-items: center; color: #c5cbd6; }
+        .footer-logo img { width: 150px; margin-left: 10px; margin-top: 20px; }
+    </style>
 </head>
 <body>
+
+    <nav class="navbar"> 
+        <div class="logo">
+            <img src="images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="">Mentors</a></li>
+            <li><a href="">Mentees</a></li>
+                
+            <li class="dropdown"> 
+                <a href="" class="drop-btn">Discover <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="">Resources</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="">Join</a></li>
+                </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+        </ul>  
+            
+        <div class="nav-buttons">
+            <a href="" class="btn btn-sign-in">Sign In</a>
+            <a href="" class="btn btn-get-started">Get Started</a>
+        </div>
+
+        <div class="bars">
+            <i class="fa-solid fa-bars" id="menuBar"></i>
+        </div>
+    </nav>
+
+    <section class="tracker-section">
+        <h1>Track Your Journey</h1>
+        <p class="center">You do not have to be fast, you just have to be steady. <br> Small steps taken daily lead to the biggest change.</p>
+        
+        <div class="tracker-container">
+      
+          <div class="step">
+            <label><input type="checkbox" id="register"> Step 1: Registration</label>
+          </div>
+      
+          <div class="step">
+            <label><input type="checkbox" id="mentor"> Step 2: Get Assigned a Mentor</label>
+          </div>
+      
+          <div class="step">
+            <label><input type="checkbox" id="sessions"> Step 3: Attend Mentorship Sessions</label>
+          </div>
+      
+          <div class="step">
+            <label><input type="checkbox" id="classes"> Step 4: Complete Digital Classes</label>
+          </div>
+      
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+      
+          <button id="generateCert" disabled>Generate Certificate</button>
+      
+          <div class="certificate" id="certificateBox">
+            <h3><i class="fa-solid fa-award"></i> Congratulations!</h3>
+            <p>You have successfully completed all mentorship program steps.</p>
+            <p><strong>Digital Certificate Generated.</strong></p>
+          </div>
+        </div>
+    </section>
+
+    <section id="must">
+        <footer class="footer">
+          <div class="footer-container">
+            <div class="footer-column">
+              <h3>SheConnect</h3>
+              <p>Empowering women through meaningful mentorship connections.</p>
+            </div>
+            <div class="footer-column">
+              <h4>Platform</h4>
+              <ul>
+                <li><a href="#">Find a Mentor</a></li>
+                <li><a href="#">Become a Mentor</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Guidelines</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-line"></div>
+        </footer>
+    </section>
+      
+    <section class="footer-bottom">
+        <footer class="foot-icon">
+          <div class="footer-logo">
+            <img src="images/sheconnect.jpg" alt="she logo" />
+          </div>
+          <div>
+            <p>© 2025 Digital Mentorship Network. All rights reserved</p>
+          </div>
+          <div>
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-whatsapp"></i>
+            <i class="bi bi-x"></i>
+            <i class="bi bi-instagram"></i>
+          </div>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.tracker-container input[type="checkbox"]');
+        const progressFill = document.getElementById("progressFill");
+        const certButton = document.getElementById("generateCert");
+        const certBox = document.getElementById("certificateBox");
     
+        function updateProgress() {
+          let completed = 0;
+          checkboxes.forEach(cb => { if (cb.checked) completed++; });
+    
+          const percentage = (completed / checkboxes.length) * 100;
+          progressFill.style.width = percentage + "%";
+    
+          if (percentage === 100) {
+            certButton.disabled = false;
+          } else {
+            certButton.disabled = true;
+            certBox.style.display = "none";
+          }
+        }
+    
+        checkboxes.forEach(cb => cb.addEventListener("change", updateProgress));
+    
+        certButton.addEventListener("click", () => {
+          certBox.style.display = "block";
+        });
+      </script>
 </body>
 </html>
