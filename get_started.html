@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | sheConnect</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="get_started.css">
+</head>
+<body>
+
+    <!-- Navbar / Header -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>SHE<span>Connect</span></h2>
+        </div>
+        <div class="step-indicator">
+            <span class="step active">1</span>
+            <span class="line"></span>
+            <span class="step">2</span>
+            <span class="line"></span>
+            <span class="step">3</span>
+        </div>
+        <a href="#" class="help-link">Need Help?</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="header-text">
+            <h1>Choose your path</h1>
+            <p>How would you like to interact with the sheConnect community today?</p>
+        </div>
+
+        <form action="#" class="selection-form">
+            <div class="cards-container">
+                
+                <!-- Mentor Card -->
+                <label class="role-card mentor-card">
+                    <input type="radio" name="role" value="mentor" class="card-input">
+                    <div class="card-content">
+                        <div class="icon-wrapper mentor-icon">
+                            <i class="fas fa-chalkboard-user"></i>
+                        </div>
+                        <h3>Become a Mentor</h3>
+                        <p class="role-desc">Share your expertise and guide the next generation of leaders.</p>
+                        
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check"></i> Give back to the community</li>
+                            <li><i class="fas fa-check"></i> Expand your leadership skills</li>
+                            <li><i class="fas fa-check"></i> Network with peers</li>
+                        </ul>
+                        
+                        <span class="select-btn">Select Mentor</span>
+                    </div>
+                </label>
+
+                <!-- Mentee Card -->
+                <label class="role-card mentee-card">
+                    <input type="radio" name="role" value="mentee" class="card-input">
+                    <div class="card-content">
+                        <div class="icon-wrapper mentee-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Become a Mentee</h3>
+                        <p class="role-desc">Accelerate your career growth with guidance from experts.</p>
+                        
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check"></i> Gain industry insights</li>
+                            <li><i class="fas fa-check"></i> Career roadmap planning</li>
+                            <li><i class="fas fa-check"></i> Unlock opportunities</li>
+                        </ul>
+
+                        <span class="select-btn">Select Mentee</span>
+                    </div>
+                </label>
+
+            </div>
+
+            <div class="action-area">
+                <button type="button" class="btn-continue" id="continueBtn" disabled>Continue</button>
+                <p class="switch-note">Not sure? You can switch roles later in settings.</p>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        
+        // 1. Select elements
+        const inputs = document.querySelectorAll('.card-input');
+        const continueBtn = document.getElementById('continueBtn');
+
+        // 2. Enable the "Continue" button when a card is clicked
+        inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                continueBtn.disabled = false;
+                continueBtn.classList.add('active');
+            });
+        });
+
+        // 3. Handle the redirection when "Continue" is clicked
+        continueBtn.addEventListener('click', () => {
+            // Get the value of the currently checked radio button
+            const selectedOption = document.querySelector('input[name="role"]:checked');
+
+            if (selectedOption) {
+                const role = selectedOption.value;
+
+                // REDIRECT LOGIC
+                if (role === 'mentor') {
+                    // Change 'mentor-dashboard.html' to your actual Mentor page file name
+                    window.location.href = 'mmentor.html'; 
+                } else if (role === 'mentee') {
+                    // Change 'mentee-dashboard.html' to your actual Mentee page file name
+                    window.location.href = 'mentee.html';
+                }
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

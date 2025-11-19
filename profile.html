@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | sheConnect</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>she<span>Connect</span></h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="mmentors.html">Find Mentors</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+        <div class="nav-user">
+            <img src="./images/headshot.png" onerror="this.src='https://placehold.co/40x40/8A00C4/white?text=JD'" alt="User">
+        </div>
+    </nav>
+
+    <main class="profile-container">
+        
+        <!-- Header Section: User Info -->
+        <header class="profile-header">
+            <div class="profile-cover"></div>
+            <div class="profile-info-wrapper">
+                <div class="profile-avatar">
+                    <img src="./images/headshot.png" onerror="this.src='https://placehold.co/150x150/png?text=JD'" alt="Jane Doe">
+                    <button class="edit-photo-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-text">
+                    <div class="name-row">
+                        <h1>Jane Doe</h1>
+                        <span class="badge">Mentee</span>
+                    </div>
+                    <p class="bio">Aspiring Product Manager | Tech Enthusiast</p>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn-primary">Edit Profile</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Row -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon purple"><i class="fas fa-clock"></i></div>
+                <div>
+                    <h3>124</h3>
+                    <p>Hours Learned</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon pink"><i class="fas fa-video"></i></div>
+                <div>
+                    <h3>12</h3>
+                    <p>Sessions Attended</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple"><i class="fas fa-certificate"></i></div>
+                <div>
+                    <h3>3</h3>
+                    <p>Certifications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            
+            <!-- Left Column: Focus & Skills -->
+            <aside class="left-column">
+                <div class="content-card">
+                    <h3 class="card-title">Current Focus</h3>
+                    <p class="focus-text">Transitioning from Customer Support to Product Management within the Fintech space.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3 class="card-title">My Skills</h3>
+                    <div class="tags-container">
+                        <span class="tag">Communication</span>
+                        <span class="tag">Agile</span>
+                        <span class="tag">JIRA</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">Public Speaking</span>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3 class="card-title">My Mentors</h3>
+                    <div class="mentor-mini-list">
+                        <div class="mentor-mini-item">
+                            <img src="https://placehold.co/40x40/8A00C4/white?text=SJ" alt="Mentor">
+                            <div>
+                                <h4>Sarah Jones</h4>
+                                <small>Product Lead</small>
+                            </div>
+                        </div>
+                        <div class="mentor-mini-item">
+                            <img src="https://placehold.co/40x40/ff69b4/white?text=MK" alt="Mentor">
+                            <div>
+                                <h4>Maria Kim</h4>
+                                <small>Tech Strategist</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Column: Learning & Journey -->
+            <section class="right-column">
+                
+                <!-- Learning Progress -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3 class="card-title">What I'm Learning</h3>
+                        <a href="#" class="see-all">View Curriculum</a>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Product Roadmap Strategy</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>SQL for Data Analytics</span>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Stakeholder Management</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline: How far they have come -->
+                <div class="content-card">
+                    <h3 class="card-title">My Journey So Far</h3>
+                    <div class="timeline">
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Nov 2025</span>
+                                <h4>Completed SQL Certification</h4>
+                                <p>Successfully passed the advanced data analytics assessment.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Oct 2025</span>
+                                <h4>Connected with Mentor</h4>
+                                <p>Started 1-on-1 sessions with Sarah Jones (Product Lead).</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">Sep 2025</span>
+                                <h4>Joined sheConnect</h4>
+                                <p>Created profile and set career transition goals.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+</body>
+</html>
