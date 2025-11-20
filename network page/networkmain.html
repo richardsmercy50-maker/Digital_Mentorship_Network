@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHE Network | Connect & Grow</title>
     <link rel="stylesheet" href="./network.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +21,17 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
-            <!-- Placeholder image used if local file missing -->
-            <img src="../images/sheconnect.jpg" onerror="this.src='https://placehold.co/40x40/8A00C4/white?text=S'" alt="Company Logo">
-            <h2>SHE <span>Connect</Canvas></span></h2>
+            <img src="../images/sheconnect.jpg" alt="Logo Image">
+            <h2>She<span>Connect</span></h2>
         </div>
-        
  
         <div class="nav-menu" id="navMenu">
             <ul class="nav-links">
                 <li><a href="../index.html" class="active">Home</a></li>
                 <li><a href="../MeetOurMentors/mentors.html">Mentors</a></li>
                 <li><a href="../mentee.html">Mentees</a></li>
-                <li><a href="./networkmain.html">Join</a></li>
-                <li><a href="../testimonies.html">Testimonies</a></li>
+                <li class="dropdown"><a href="/network page/networkmain.html">Join</a>
+                </li>
             </ul>
  
             <div class="nav-buttons">
@@ -129,46 +128,19 @@
                 <h2 class="section-title">DIRECTORY</h2>
                 <span class="badge">Live</span>
             </div>
-            <div class="details">
-                <h4 class="detail">DETAILS</h4>
-                <form class="basic_details" id="basic_details">
-                    <label class="first_name">First Name</label>
-                    <input id="first_name" placeholder="Enter Your First Name Here" type="text" required /> <br>
-
-                    <label class="last_name">Last Name</label>
-                    <input id="last_name" placeholder="Enter Your Last Name Here" type="text" required /><br>
-
-                    <label class="phone_number">Phone Number</label>
-                    <input id="phone_number" placeholder="E.g  +23490567890" type="tel" required /><br>
-
-                    <label class="Email">Email</label>
-                    <input id="Email" placeholder="E.g example@example.com" type="email" required /><br>
-
-                    <label class="about_me">About Me</label>
-                    <textarea id="about_me" placeholder="A brief description about yourself" name="about_me" rows="4" required></textarea><br>
-
-                    <label class="experience">Experience</label>
-                    <textarea id="experience" placeholder="Describe your experience" name="experience" rows="4" required></textarea><br>
-
-                    <label class="goal">Goals</label>
-                    <textarea id="goal" placeholder="E.g Career advancement, skill development" name="goal" rows="4" required></textarea><br>
-
-                    <label class="interest">Select your Interest</label>
-                    <select id="interest">
-                        <option value="FrontEnd"> Frontend</option>
+ 
+            <div class="search-and-filter">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input class="search-input" type="text" placeholder="Search mentors by name or company...">
+                </div>
+ 
+                <div class="filters">
+                    <select id="industry" class="filter-select">
+                        <option value="industry">Filter by Skills</option>
+                        <option value="FrontEnd">Frontend</option>
                         <option value="backend">Backend</option>
-                        <option value="full_stack">Full Stack</option>
-                        <option value="mobile_app_development">Mobile App Development</option>
-                        <option value="project_management">Project Management</option>
-                        <option value="cloud_computing">Cloud Computing</option>
                         <option value="ui_ux">UI/UX</option>
-                        <option value="product_design">Product Design</option>
-                        <option value="data_science">Data Science</option>
-                        <option value="data_analysis">Data Analysis</option>
-                        <option value="cybersecurity">Cybersecurity</option>
-                        <option value="content_writing">Content Writing</option>
-                        <option value="digital_marketing">Digital Marketing</option>
-                        <option value="quality_assurance">Quality Assurance</option>
                     </select>
                     <select id="goals" class="filter-select">
                         <option value="goals">Filter by Goals</option>
@@ -177,43 +149,26 @@
                     </select>
                 </div>
             </div>
-            <button class="button_submit" type="submit">Join Now</button>
-            </form>
-        </div>
-        <div class="second_part">
-            <h2 class="directory">DIRECTORY</h2>
-            <input class="search-input" type="text" placeholder="Search for Mentors...">
-
-            <div class="first_section2">
-                <h5 class="skills">Skills</h5>
-                <select id="industry">
-                        <option value="FrontEnd"> Frontend</option>
-                        <option value="backend">Backend</option>
-                        <option value="full_stack">Full Stack</option>
-                        <option value="mobile_app_development">Mobile App Development</option>
-                        <option value="project_management">Project Management</option>
-                        <option value="ui_ux">UI/UX</option>
-                        <option value="product_design">Product Design</option>
-                        <option value="data_science">Data Science</option>
-                        <option value="data_analysis">Data Analysis</option>
-                        <option value="cybersecurity">Cybersecurity</option>
-                        <option value="content_writing">Content Writing</option>
-                        <option value="digital_marketing">Digital Marketing</option>
-                        <option value="quality_assurance">Quality Assurance</option>
-                </select>
-                <select id="goals">
-                    <option value="industry"> Goals</option>
-                    <option value="FrontEnd"> text</option>
-                    <option value="backend">text</option>
-                    <option value="ui_ux">text</option>
-                </select>
-            </div>
-            <div class="second_section">
-                <div class="first_box">
-                    <img src="./images/headshot.png" class="headshot" width="45px" height="45px" />
-                    <h4 class="name">Musa Taiwo</h4>
-                    <h5 class="skill">Frontend Engineer</h5>
-                    <p>Hard Skills: HTML, CSS, Javascript, React</p>
+ 
+            <div class="mentor-cards-grid">
+                <!-- Card 1 -->
+                <div class="mentor-card">
+                    <div class="card-header">
+                        <img src="./images/headshot.png" onerror="this.src='https://placehold.co/60x60/png'" alt="Musa Taiwo" class="headshot" />
+                        <div class="name-title">
+                            <h3 class="mentor-name">Musa Taiwo</h3>
+                            <p class="mentor-role">Frontend Engineer</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="skills-label">Top Skills:</p>
+                        <div class="tags-container">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                    <button class="connect-card-btn">Connect <i class="fas fa-arrow-right"></i></button>
                 </div>
  
                 <!-- Card 2 -->
@@ -265,7 +220,7 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <div class="resource-info">
-                        <a class="resource-link" href="../resources.html" target="_blank">Goal Setting Framework</a>
+                        <a class="resource-link" href="resources.html" target="_blank">Goal Setting Framework</a>
                         <span class="resource-meta">Guide • Source: CHAMP</span>
                     </div>
                     <div class="action-arrow">

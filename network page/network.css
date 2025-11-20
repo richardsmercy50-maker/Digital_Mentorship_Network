@@ -40,40 +40,7 @@ ul {
 }
  
 /* --- Navbar --- */
-.navbar {
-    width: 100%;
-    background-color: var(--bg-white);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: var(--shadow-sm);
-}
- 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
- 
-.logo img {
-    height: 35px;
-    width: 35px;
-}
- 
-.logo h2 {
-    color: var(--text-dark);
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-}
- 
-.logo span {
-    color: var(--primary);
-}
+
  
 /* Nav Container for handling Mobile Toggle */
 .nav-menu {
@@ -99,7 +66,7 @@ ul {
 .nav-links a:hover, .nav-links a.active {
     color: var(--primary);
 }
- 
+  */
 /* Buttons */
 .btn {
     font-weight: 600;
